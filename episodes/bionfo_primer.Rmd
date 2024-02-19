@@ -1,0 +1,37 @@
+---
+title: ' Primer in Bioinformatics'
+teaching: 0
+exercises: 0
+---
+
+::: objectives
+-   Introduce the idea of OMICs and explain why they are important in bioinformatics.
+
+-   File Formats in Bioinformatics: overview of FASTQ, SAM/BAM/CRAM.
+
+-   Understanding the multilayered nature of metadata from OMICs experiments.
+:::
+
+**Introduction**: OMICs technologies provide comprehensive approaches to explore the roles, relationships, and actions of the various types of molecules that make up the cells of an organism. They are crucial in understanding biological phenomena in a holistic manner.
+
+**Main Content**:
+
+-   **Genomics**: Study of an organism's entire genome, exome or selected regions, offering insights into genetic variations. When associated with disease phenotype or clinical data can be implicated on health and disease.
+
+-   **Transcriptomics**: Focuses on the transcriptome, the complete set of RNA transcripts produced by the genome, under specific circumstances or in a specific cell.
+
+-   **Proteomics**: Examines the proteome, the entire set of proteins produced or modified by an organism, revealing functions and pathways.
+
+-   **Metabolomics**: Involves the study of metabolites, providing a snapshot of the physiological condition of a cell or organism.
+
+**Raw sequencing formats:** high-throughput machine such as Illumina, Nanopore, produce files before base calling.
+
+**FASTQ format** is a text-based format for storing both a oligonucleotide sequence and its corresponding quality scores. Obtained after a process name base calling.
+
+::: note 
+The FASTQ format is crucial in bioinformatics for storing nucleotide sequences along with their quality scores. Each sequence in a FASTQ file is represented by four lines: a header with a '@' symbol followed by an identifier and optional description, the nucleotide sequence itself, a separator line starting with a '+', and the quality scores encoded as ASCII characters. This structure allows for efficient storage and analysis of sequencing data, essential for tasks like genome assembly and analysis. For more detailed information, please visit the Wikipedia page on [FASTQ format](https://en.wikipedia.org/wiki/FASTQ_format).
+:::
+
+**SAM/BAM/CRAM** formats are
+
+**Conclusion**: Understanding OMICs is essential for bioinformatics, enabling researchers to decipher complex biological data and contribute to advancements in personalized medicine, disease understanding, and biotechnology.
