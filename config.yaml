@@ -61,6 +61,7 @@ contact: 'thiago.brittoborges@uni-heidelberg.de'
 episodes:
 - introduction.Rmd
 - bionfo_primer.Rmd
+- sodar.Rmd
 - data_management_plan.Rmd
 
 # Information for Learners
