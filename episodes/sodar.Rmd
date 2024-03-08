@@ -19,13 +19,13 @@ output: pdf_document
 
 ## Overview
 
-![](images/SodarLogo.svg)
+![](fig/SodarLogo.svg)
 
 **S**ystem for **O**mics **D**ata **A**ccess and **R**etrieval (**SODAR**) is a specialized system designed for managing data in OMICs research projects. The platform provides medical experts with a central location for navigating and coordinating data, connecting to other resources and systems. Key features of SODAR include project-based access control, modeling study design metadata, large-scale data storage, file validation, and various tools for data management. SODAR aims to address challenges faced by scientists working on OMICs studies by offering a user-friendly interface for managing multi-assay studies and organizing raw dataset, metadata and results in a single place. Most end users will use SODAR via its web-based GUI, while data stewards will use the REST APIs. SODAR server runs on the Django web server, models metadata with the ISA specification, and uses iRODS for file storage. SODAR is developed by the [Core Unit Bioinformatics](https://www.cubi.bihealth.org/) at the [Berlin Institute of Health](https://www.bihealth.org/). The software is written in Python 3 and freely available under the MIT license.
 
 ### SODAR components and data workflow
 
-![](images/clipboard-1870335311.png) Figure 1. Overview of data workflow with SODAR. The next sections will detail each component.
+![](fig/clipboard-1870335311.png) Figure 1. Overview of data workflow with SODAR. The next sections will detail each component.
 
 #### SODAR server
 
@@ -41,7 +41,7 @@ The SODAR server is the main component of the system. It comprises several modul
 
 The combinations of these apps allow the SODAR server results the following webpage:
 
-![](images/clipboard-3240582884.png) Figure 2: SODAR developers provide a demo instance at [this url][<https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7>].
+![](fig/clipboard-3240582884.png) Figure 2: SODAR developers provide a demo instance at [this url][<https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7>].
 
 #### iRODS server
 
@@ -57,7 +57,7 @@ Davrods provides access to iRODS servers using the WebDAV protocol, a similar pr
 
 ### SODAR naming and concepts
 
-![](images/clipboard-3896476926.png)
+![](fig/clipboard-3896476926.png)
 Fig2. SODAR project overview page.
 
 #### Web-UI
@@ -95,7 +95,7 @@ TODO
 
 ### SODAR data workflow step-by-step usage
 
-![](images/clipboard-3042118772.png){width="847"}
+![](fig/clipboard-3042118772.png){width="847"}
 
 1.  Create a project <https://sodar-test.dieterichlab.org/project/project/create>
 
@@ -105,10 +105,12 @@ TODO
 
     1.  Select ISA-Tab Template (Bulk RNA sequencing ISA-tab template)
     2.  Import Sample Sheets from ISA-Tab
+3. Activate the irods server on Sample Sheet section
 
 4.  Upload files
 
     1.  Use \<[cubi-tk](https://github.com/bihealth/cubi-tk) [sodar ingest](https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/docs_manual/man_sodar_ingest.rst#L4)\>
+    cubi-tk sodar ingest --sodar-url <url> --sodar-api-token <api_token> <file> <landing_zone_uid> 
 
     2.  Use iRODs \<[iput](https://docs.irods.org/master/icommands/user/#iput)\>
 
@@ -120,7 +122,9 @@ TODO
 
 <https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html>
 
-### Why \<qb sodar ingest-fasq\> is not working?
+### Why \<cubi-tk sodar ingest-fasq\> is not working?
+
+The cubi-tk is a command line tool that allows to interact with SODAR server. The command `cubi-tk sodar ingest-fasq` because of configuration error. Use \<cubi-tk sodar ingest\>.
 
 ? URL for sheet synchronization
 
