@@ -4,6 +4,12 @@ teaching: 0
 exercises: 0
 ---
 
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- None
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::: objectives
 -   Introduce the idea of OMICs and explain why they are important in bioinformatics.
 
@@ -28,10 +34,15 @@ exercises: 0
 
 **FASTQ format** is a text-based format for storing both a oligonucleotide sequence and its corresponding quality scores. Obtained after a process name base calling.
 
-::: note
+::: hint
 The FASTQ format is crucial in bioinformatics for storing nucleotide sequences along with their quality scores. Each sequence in a FASTQ file is represented by four lines: a header with a '\@' symbol followed by an identifier and optional description, the nucleotide sequence itself, a separator line starting with a '+', and the quality scores encoded as ASCII characters. This structure allows for efficient storage and analysis of sequencing data, essential for tasks like genome assembly and analysis. For more detailed information, please visit the Wikipedia page on [FASTQ format](https://en.wikipedia.org/wiki/FASTQ_format).
 :::
 
 **SAM/BAM/CRAM** formats are
 
 **Conclusion**: Understanding OMICs is essential for bioinformatics, enabling researchers to decipher complex biological data and contribute to advancements in personalized medicine, disease understanding, and biotechnology.
+
+
+:::::: keypoints
+ - TODO
+::::::

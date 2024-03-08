@@ -4,6 +4,13 @@ teaching: 0
 exercises: 0
 ---
 
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- None
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 ::: objectives
 -   Establishing a data management strategy within the CRC.
 -   Detailing roles and responsibilities for data management.
@@ -21,7 +28,7 @@ The data generated in high-throughput experiments can be categorized into two ma
 
 **Processed data** represents the results obtained after applying various bioinformatics and statistical analysis techniques to the raw data. This includes sequences filtered by quality, identified genetic variants, and derived annotations, such as genes called differentially expressed. The data management team will work closely with the bioinformatics team to establish workflows and standardize processing methods to ensure consistent and reproducible results.
 
-### **Roles and responsibilities** 
+### **Roles and responsibilities**
 
 The data owner and data manager must work together to ensure data flow, documentation, and data management best practices throughout the project. To keep high-throughput data secure, accessible, and usable, these roles must communicate regularly.
 
@@ -118,3 +125,8 @@ The data portal can be customized to provide specific functionalities for data v
 The portal supports access control mechanisms, allowing us to define user roles and permissions. We can configure access restrictions to ensure that consortium members have the appropriate level of access to data and metadata within the system. OpenBIS enables collaboration by providing controlled sharing and collaboration features among authorized users. In addition, OpenBIS can integrate with public repositories that work as  external data sharing platforms, such as Zenodo, that generate persistent identifiers (e.g., DOI) for datasets, facilitating easy referencing and citation.
 
 OpenBIS includes built-in security features to protect data integrity and confidentiality. It supports user authentication and authorization, data encryption, and audit trails to track system activities. Additionally, OpenBIS can be integrated with backup systems to ensure regular data backups and disaster recovery.
+
+:::::: keypoints
+ - TODO
+::::::
+
