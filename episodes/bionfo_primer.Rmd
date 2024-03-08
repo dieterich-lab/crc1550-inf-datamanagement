@@ -2,6 +2,7 @@
 title: ' Primer in Bioinformatics'
 teaching: 0
 exercises: 0
+output: pdf_document
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -41,7 +42,6 @@ The FASTQ format is crucial in bioinformatics for storing nucleotide sequences a
 **SAM/BAM/CRAM** formats are
 
 **Conclusion**: Understanding OMICs is essential for bioinformatics, enabling researchers to decipher complex biological data and contribute to advancements in personalized medicine, disease understanding, and biotechnology.
-
 
 :::::: keypoints
  - TODO
