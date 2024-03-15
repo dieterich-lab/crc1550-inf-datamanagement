@@ -8,10 +8,10 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry: ''
+carpentry:
 
 # Overall title for pages.
-title: 'CRC1550 data managemnet training material'
+title: 'CRC1550 data management training material'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2024-02-14'
@@ -61,8 +61,10 @@ contact: 'thiago.brittoborges@uni-heidelberg.de'
 episodes:
 - introduction.Rmd
 - bionfo_primer.Rmd
+- fair-principles.Rmd
 - sodar.Rmd
 - data_management_plan.Rmd
+
 
 # Information for Learners
 learners:

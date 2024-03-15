@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Metadata'
+title: 'Preamble to Data Management Plan'
 teaching: 0
 exercises: 0
 ---
