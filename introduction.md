@@ -1,0 +1,43 @@
+---
+title: 'Preamble to Data Management Plan'
+teaching: 0
+exercises: 0
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- None
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- What is Metadata? 
+- What is the differentiate between data and metadata.
+- Data management and metadata standardization.
+- Understanding its importance in OMICs experiments.
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction
+
+In this lesson, we will learn about metadata and its importance in data analysis. We will learn about the different types of metadata and how it is used to provide context and meaning to data. We will also learn about the importance of metadata standardization and how it can help to improve data management and data analysis. Finally, we will learn about the importance of metadata in OMICs experiments and how it can help to improve the reproducibility and reliability of research results.
+
+### What is Metadata?
+Metadata is data that provides information about other data. It is an essential component of any data analysis pipeline. It is used to describe the content, quality, condition, and other characteristics of data. Metadata is used to provide context and meaning to data. It is used to help users understand the data and to help them make informed decisions about how to use it.
+
+### Data vs. Metadata
+Data is the raw information that is collected and analyzed in a research study. It is the information that is used to answer research questions and to make decisions. Metadata is the information that describes the data. It is the information that provides context and meaning to the data. It is used to help users understand the data and to help them make informed decisions about how to use it.
+
+An every day analogy is digital photography. Every time you take a photo with a digital camera, a range of "behind-the-scenes" information is saved along with the image data. This is known as metadata, and it can include details of the camera, lens and shooting settings used, plus optional information about the photographer, location and more.  
+
+### Data Management and Metadata Standardization
+
+Metadata standardization is the process of defining and implementing a set of rules and guidelines for the creation, management, and use of metadata. It is used to ensure that metadata is reliable. It is used to help users find, access, and use data more effectively.
+
+:::::: keypoints
+ - Data and metadata are important components of any data analysis pipeline.
+ - Metadata standardization is critical for reliable results.
+ - Data management plan and metadata enables data FAIRification.
+::::::
+
+
