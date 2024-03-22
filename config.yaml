@@ -8,7 +8,7 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry:
+carpentry: incubator
 
 # Overall title for pages.
 title: 'CRC1550 data management training material'
@@ -64,7 +64,7 @@ episodes:
 - fair-principles.Rmd
 - sodar.Rmd
 - data_management_plan.Rmd
-
+- sra.Rmd
 
 # Information for Learners
 learners:
