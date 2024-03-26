@@ -10,6 +10,9 @@
     <loc>https://tbrittoborges.github.io/omics_metadata/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/aio.html</loc>
+  </url>
+  <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/bionfo_primer.html</loc>
   </url>
   <url>
@@ -17,6 +20,9 @@
   </url>
   <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/fair-principles.html</loc>
+  </url>
+  <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/images.html</loc>
   </url>
   <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/index.html</loc>
@@ -31,6 +37,9 @@
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/bionfo_primer.html</loc>
   </url>
   <url>
@@ -40,10 +49,19 @@
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/fair-principles.html</loc>
   </url>
   <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/profiles.html</loc>
@@ -58,7 +76,13 @@
     <loc>https://tbrittoborges.github.io/omics_metadata/instructor/sra.html</loc>
   </url>
   <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://tbrittoborges.github.io/omics_metadata/key-points.html</loc>
   </url>
   <url>
     <loc>https://tbrittoborges.github.io/omics_metadata/profiles.html</loc>
