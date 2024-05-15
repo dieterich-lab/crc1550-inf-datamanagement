@@ -6,38 +6,65 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- None
+- What is Metadata? 
+- How to describe metadata?
+- What is the difference between data and metadata?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- What is Metadata? 
-- What is the differentiate between data and metadata.
-- Data management and metadata standardization.
-- Understanding its importance in OMICs experiments.
+- Defining data management plan.
+- Understanding its importance applied to OMICs experiments.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-In this lesson, we will learn about metadata and its importance in data analysis. We will learn about the different types of metadata and how it is used to provide context and meaning to data. We will also learn about the importance of metadata standardization and how it can help to improve data management and data analysis. Finally, we will learn about the importance of metadata in OMICs experiments and how it can help to improve the reproducibility and reliability of research results.
+In this lesson, we will learn about metadata and its importance. We will learn about the different types of metadata and how it is used to provide context and meaning to data. We will also learn about the importance of metadata standardization and how it can help to improve data management and data analysis. Finally, we will learn about the importance of metadata in OMICs experiments and how it can help to improve the reproducibility and reliability of research results.
 
 ### What is Metadata?
+
 Metadata is data that provides information about other data. It is an essential component of any data analysis pipeline. It is used to describe the content, quality, condition, and other characteristics of data. Metadata is used to provide context and meaning to data. It is used to help users understand the data and to help them make informed decisions about how to use it.
 
 ### Data vs. Metadata
+
 Data is the raw information that is collected and analyzed in a research study. It is the information that is used to answer research questions and to make decisions. Metadata is the information that describes the data. It is the information that provides context and meaning to the data. It is used to help users understand the data and to help them make informed decisions about how to use it.
 
-An every day analogy is digital photography. Every time you take a photo with a digital camera, a range of "behind-the-scenes" information is saved along with the image data. This is known as metadata, and it can include details of the camera, lens and shooting settings used, plus optional information about the photographer, location and more.  
+An everyday analogy is digital photography. Every time you take a photo with a digital camera, a range of “behind-the-scenes” information is saved along with the image data. This is known as metadata, and it can include details of the camera, lens, and shooting settings used, plus optional information about the photographer, location and more. Similarly, every experiment generates data, and contains metadata.
+
+An experimental protocol, for example, is considered part of the metadata of an experiment. There are different levels of metadata, which will be discussed in more detail once we discuss the ISA (Investigation, Study and Assay) framework.
+
+### Goals of data management plan
+
+ - Automated deposition of data and metadata to public repositories (findability).
+ - Ensure that data is stored in a format that is easily accessible and usable (accessibility).
+ - Define consistent terminologies and controlled vocabularies to represent the data (interoperability).
+ - Ensure that data is stored in a secure and reliable manner (reusability).
+
+### Roles and responsibilities
+
+ - Data owners: Persons responsible for generating the data and metadata.
+ - Data managers: The person responsible for managing the data and metadata.
+ <!-- - Data stewards: The person responsible for ensuring that the data and metadata are accurate and reliable. -->
+ - Data users: The person responsible for using the data and metadata to answer research questions and make decisions.
+
+### Benefits of Data Management and Metadata Standardization
+
+- Delegates responsibilities for data management (i.e., storage, backup, and controlled sharing).
+- Uniform metadata standardization allows better collaboration within the CRC. (i.e., use of controlled vocabularies, consistent terminologies).
+- Enables collaboration within the CRC and with external partners (i.e., method development, data re-use).
+- Compliance with funder requirements.
+- Allows streamlined interoperation between infrastructure teams.
 
 ### Data Management and Metadata Standardization
 
 Metadata standardization is the process of defining and implementing a set of rules and guidelines for the creation, management, and use of metadata. It is used to ensure that metadata is reliable. It is used to help users find, access, and use data more effectively.
 
 :::::: keypoints
+ - Data management plan and metadata enables data FAIRification.
  - Data and metadata are important components of any data analysis pipeline.
  - Metadata standardization is critical for reliable results.
- - Data management plan and metadata enables data FAIRification.
+ - There are three roles in data management: data owners, managers, and users.
+ - Data management and metadata standardization provide numerous benefits that enhance the overall quality, usability, and impact of research data.
 ::::::
-
-
