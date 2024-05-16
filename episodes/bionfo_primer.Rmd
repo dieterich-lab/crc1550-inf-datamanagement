@@ -21,7 +21,10 @@ output: pdf_document
 
 OMICs technologies provide unbiased measurements of molecular entities in biological samples. These measurements allow for a comprehensive exploration of functions and association of such entities. System biology is a branch of biology that aims to comprehend biological systems in their entirety by the application of OMICs methods.
 
-::: hint
+::: callout
+
+#### CRC1550 focus
+
 Within the CRC1550, the data management plan currently focuses on animal experiments, and the data generated from specific OMICs experiments.   The data management plan is a living document that will be updated as the project progresses. Currently, we don't consider data human data from patient samples, such as clinical data, or imaging data, which are current out of the scope of this material.
 :::
 
@@ -41,7 +44,10 @@ There are a multitude of file formats used in bioinformatics, each with its spec
 
 **FASTQ format**: is sequence data formats, a text-based format for storing both an oligonucleotide sequence and its corresponding quality scores. Obtained after base calling procedure.
 
-::: hint
+::: callout
+
+#### FASTQ file format
+
 For bioinformatics workflow, the FASTQ format is often the initial step. This file format stores “reads”, or  nucleotide sequences, along with their quality scores. Each sequence in a FASTQ file is represented by four lines: a header with a '\@' symbol followed by an identifier and optional description, the nucleotide sequence itself, a separator line starting with a '+', and the quality scores encoded as ASCII characters. This structure allows for efficient storage and analysis of sequencing data, essential for tasks like genome assembly and analysis. For more detailed information, please visit the Wikipedia page on [FASTQ format](https://en.wikipedia.org/wiki/FASTQ_format).
 :::
 
@@ -68,7 +74,9 @@ Note that various proprietary formats are used for raw proteomics data depending
 
 The scope of this lesson is to give an overview of file formats used in bioinformatics. It is important to understand that the different files a specific purpose, can be vendor-specific and that the choice of file format can have a significant impact on the downstream analysis of the data. For example, use of legacy vendor-specific format can limit the use of the data in modern bioinformatics pipelines, as proprietary programs may disappear. In general, it's good practice to use open-source file formats.
 
-::: hint
+::: callout
+
+#### Raw vs processed data
 As a general rule of thumb, one can consider the raw data as the data that comes directly from the sequencing machine, and the processed data any data set derived from the raw data. The raw data is often in a format that is not human-readable, and requires specialized software to process. This definition may change depending on context.
 :::
 
