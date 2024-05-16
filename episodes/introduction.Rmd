@@ -63,6 +63,7 @@ Here we define the goals of a data management plan in context to the FAIR framew
 - Promotes collaboration within the CRC and with external partners, supporting method development and data reuse.
 - Ensures compliance with funder requirements.
 - Facilitates efficient interoperability among infrastructure teams.
+- Enable audit trail of data and metadata changes.
 
 ## Metadata management plan and FAIR framewok
 
