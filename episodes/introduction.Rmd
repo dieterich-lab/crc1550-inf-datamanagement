@@ -35,7 +35,13 @@ An everyday analogy is digital photography. Every time you take a photo with a d
 
 An experimental protocol, for example, is considered part of the metadata of an experiment. There are different levels of metadata, which will be discussed in more detail once we discuss the ISA (Investigation, Study and Assay) framework.
 
+## Data management plan
+
+A data management plan (DMP) is a document that outlines how data will be handled throughout a research project. It explains how to collect, organize, store, and share data, as well as ways to make sure that data is safe and meets legal and ethical standards. The DMP aims to enhance the accessibility, usability, and reproducibility of the data, as detailed below.
+
 ### Goals of data management plan
+
+Here we define the goals of a data management plan in context to the FAIR framework:
 
  - Automated deposition of data and metadata to public repositories (findability).
  - Ensure that data is stored in a format that is easily accessible and usable (accessibility).
@@ -51,20 +57,59 @@ An experimental protocol, for example, is considered part of the metadata of an 
 
 ### Benefits of Data Management and Metadata Standardization
 
-- Delegates responsibilities for data management (i.e., storage, backup, and controlled sharing).
-- Uniform metadata standardization allows better collaboration within the CRC. (i.e., use of controlled vocabularies, consistent terminologies).
-- Enables collaboration within the CRC and with external partners (i.e., method development, data re-use).
-- Compliance with funder requirements.
-- Allows streamlined interoperation between infrastructure teams.
+- Increase impact and visibility of research.
+- Assigns clear responsibilities for data management tasks such as storage, backup, and controlled sharing.
+- Standardizes data and metadata to facilitate collaboration using consistent terminologies and controlled vocabularies.
+- Promotes collaboration within the CRC and with external partners, supporting method development and data reuse.
+- Ensures compliance with funder requirements.
+- Facilitates efficient interoperability among infrastructure teams.
 
-### Data Management and Metadata Standardization
+## Metadata management plan and FAIR framewok
 
-Metadata standardization is the process of defining and implementing a set of rules and guidelines for the creation, management, and use of metadata. It is used to ensure that metadata is reliable. It is used to help users find, access, and use data more effectively.
+The FAIR principles are a set of guidelines that aim to make data Findable, Accessible, Interoperable, and Reusable. 
+
+### Findability
+
+Metadata and data should be easily discoverable by both humans and machines. To ensure findability, each data object must have a unique and persistent identifier:
+- Data objects must be re-findable at any time, with an emphasis on maintaining persistent metadata.
+- Each data object should include basic machine-readable metadata to differentiate it from other objects.
+- Identifiers for concepts used in data objects must be unique and persistent.
+
+### Accessibility
+
+After finding data, it's crucial to understand the conditions for accessing them. Data should be accessible to both machines and humans:
+
+- With proper authorization.
+- Via a well-defined protocol.
+
+This ensures that both machines and humans can determine the actual accessibility of each data object. 
+
+### Interoperability
+
+Data needs to be processed and, often, be integrated with other data sets and be compatible with various applications or workflows for analysis, storage, and processing.
+
+Data objects are interoperable if:
+- The (meta)data is machine-actionable.
+- The (meta)data formats use shared vocabularies or ontologies.
+- The (meta)data within the data object is both syntactically parsable and semantically machine-accessible.
+
+### Reusability
+
+The ultimate goal is to optimize the reuse of data, requiring that metadata and data be well-described for use, replication, and combination in various settings.
+
+For data objects to be reusable, they must:
+
+- Comply with principles of findability, accessibility, and interoperability.
+- Be sufficiently well-described and rich in metadata to allow automatic linking or integration with relevant data sources, with minimal human effort.
+- Include rich metadata and provenance information for proper citation of published data objects and their sources.
+
+## Conclusions
+
+Data and metadata standardization and description involves establishing and applying rules and guidelines for creating, managing, and using metadata. This process ensures that metadata is reliable and helps users more effectively find, access, and utilize data.
 
 :::::: keypoints
- - Data management plan and metadata enables data FAIRification.
- - Data and metadata are important components of any data analysis pipeline.
- - Metadata standardization is critical for reliable results.
+ - Data management plan execution enables data FAIRification.
+ - Metadata standardization is critical for reliable results and reproducibility.
  - There are three roles in data management: data owners, managers, and users.
  - Data management and metadata standardization provide numerous benefits that enhance the overall quality, usability, and impact of research data.
 ::::::
