@@ -81,10 +81,10 @@ There are many challenges involved in the use of OMICs datasets.
 - **Standardization**: As there are many file formats, there are many data standards and protocols used in OMICs research. This lack of standardization make it difficult to compare data between different centres.
 - **Data sharing**: OMICs datasets are required to be shared upon publication.
 
-All the challenges can be mitigated through the use of the meta data managing plan. Metadata is essential for understanding the context of the data, and is used to help find and interpret the data. In the context of OMICs data, metadata can include information about the sample donor, sample, the experimental conditions, the data collection methods, protocols  and the data analysis methods. Metadata is essential for reproducibility, as it allows others to understand and replicate the results of an experiment.
+All the challenges can be mitigated through the use of the meta data managing plan. Metadata is essential for understanding the context of the data, and is used to help find and interpret the data. In the context of OMICs data, metadata can include information about the sample donor, sample, the experimental conditions, the data collection methods, protocols  and the data analysis methods. Results files can also contain metadata describing the processing steps used on the raw files. Metadata is essential for reproducibility, as it allows others to understand and replicate the results of experiments.
 
 :::::: keypoints
- - OMICs technologies are crucial for a holistic understanding of biological systems.
- - Common file formats in bioinformatics serve specific purposes, facilitating data analysis and sharing.
- - Metadata plays a critical role in contextualizing and modeling OMICs data.
+- **OMICs technologies** are crucial for a holistic understanding of biological systems.
+- Common file formats in bioinformatics serve specific purposes, facilitating data analysis and sharing.
+- Metadata plays a critical role in contextualizing and modeling OMICs data.
 ::::::
