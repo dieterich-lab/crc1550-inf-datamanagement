@@ -13,7 +13,8 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Get to know the SRA database
-- Understand the requiriments for data deposition
+- Understand the requirements for data deposition
+- Learn required optional field used for a RNA-sequencing experiment
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

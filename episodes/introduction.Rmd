@@ -67,7 +67,16 @@ Here we define the goals of a data management plan in context to the FAIR framew
 
 ## Metadata management plan and FAIR framewok
 
-The FAIR principles are a set of guidelines that aim to make data Findable, Accessible, Interoperable, and Reusable. 
+In this document we outline the strategies and procedures for managing high-throughput data within the CRC1550's integrated infrastructure. The CRC-INF plan is centered on the consolidation of interfaces, procedures, and interoperability standards (Aim 1) and the development of generic bioinformatics workflows for the standard analysis of multimodal data sets from CRC projects (Aim 2). The primary objective of the data management team is to ensure the efficient management of unprocessed and processed data produced by high-throughput experiments by providing services (and interfaces) to manage and store data and metadata.
+
+![](https://lh7-us.googleusercontent.com/HIZrk0S_WDLJXpKYFcl6BfZY5or_grINIHr6JNW_5mZmpb3xLxy6_aQEcPiEAmGwL_pS6LpaJ9aPpHUEbDZ-DSDUpPtE_cciZNdvwZGSsqYUJ9br8Bzr_bacQ2UdG1-WFKlsMBUu9LBpergxc4EtppU)
+
+There are three working groups:
+- The BioBanking working group is responsible for the collection, storage, and management of biological samples.
+- The Data Management working group.
+- The bioinformatics working group is responsible for the analysis of high-throughput data.
+
+This course is focused on the Data Management working group.
 
 ### Findability
 
