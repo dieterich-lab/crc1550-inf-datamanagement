@@ -92,11 +92,11 @@
   CRC1550 data management training material
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 50%" class="percentage">
-    50%
+<aside class="col-md-12 lesson-progress"><div style="width: 62%" class="percentage">
+    62%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 50%" aria-valuenow="50" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 62%" aria-valuenow="62" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -162,7 +162,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="bionfo_primer.html">2. Primer in Bioinformatics</a>
+        <a href="bionfo_primer.html">2. An introduction to bioinformatics file formats.</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -171,7 +171,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="fair-principles.html">3. fair_principles</a>
+        <a href="fair-principles.html">3. FAIR Principles in OMICs Research</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -180,20 +180,12 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         4. SODAR: System for Omics Data Access and Retrieval.
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-        
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#overview">Overview</a></li>
-<li><a href="#faq-and-pratical-notes">FAQ and pratical notes:</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -201,16 +193,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="data_management_plan.html">5. Data Management Plan</a>
-    </div><!--/div.accordion-header-->
-        
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="sra.html">6. SRA</a>
+        <a href="sra.html">5. SRA</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -259,22 +242,22 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/fair-principles.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/data_management_plan.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/sra.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/fair-principles.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: fair_principles
+          Previous: FAIR Principles in
         </a>
-        <a class="chapter-link float-end" href="../instructor/data_management_plan.html" rel="next">
-          Next: Data Management... 
+        <a class="chapter-link float-end" href="../instructor/sra.html" rel="next">
+          Next: SRA... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>SODAR: System for Omics Data Access and Retrieval.</h1>
-        <p>Last updated on 2024-05-14 |
+        <p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/sodar.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -295,7 +278,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>None</li>
+<ul><li>How to use SODAR for data and metadata entry?</li>
 </ul></div>
 </div>
 </div>
@@ -304,17 +287,18 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Introduces SODAR</li>
-<li>Detail on main concepts of the tool</li>
-<li>How to use SODAR</li>
+<li>Oviewview of the main concepts</li>
+<li>How the process for data and metadata upload works within the
+CRC1550-INF</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section id="overview"><h2 class="section-heading">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h2>
-<hr class="half-width"><p><img src="../fig/SodarLogo.svg" class="figure"><strong>S</strong>ystem for
-<strong>O</strong>mics <strong>D</strong>ata <strong>A</strong>ccess and
+<div class="section level1">
+<h1 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h1>
+<figure><img src="../fig/SodarLogo.svg" class="figure mx-auto d-block"></figure><p><strong>S</strong>ystem for <strong>O</strong>mics
+<strong>D</strong>ata <strong>A</strong>ccess and
 <strong>R</strong>etrieval (<strong>SODAR</strong>) is a specialized
 system designed for managing data in OMICs research projects. The
 platform provides medical experts with a central location for navigating
@@ -332,19 +316,20 @@ the <a href="https://www.cubi.bihealth.org/" class="external-link">Core Unit
 Bioinformatics</a> at the <a href="https://www.bihealth.org/" class="external-link">Berlin
 Institute of Health</a>. The software is written in Python 3 and freely
 available under the MIT license.</p>
-<div class="section level3">
-<h3 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a></h3>
+</div>
+<div class="section level1">
+<h1 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a></h1>
 <p><img src="../fig/clipboard-1870335311.png" class="figure"> Figure 1. Overview of data
 workflow with SODAR. The next sections will detail each component.</p>
-<div class="section level4">
-<h4 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a></h4>
+</div>
+<div class="section level1">
+<h1 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a></h1>
 <p>The SODAR server is the main component of the system. It comprises
 several modules called Django apps, which are responsible for different
 tasks. Although these apps are not the utmost importance for the users,
 understanding the available apps allows users to understand the full
-potential of the system. The main apps are detailed in the [GitHub
-repository][<a href="https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information" class="external-link uri">https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information</a>]
-of the project and listed below:</p>
+potential of the system. The main apps are detailed in the <a href="https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information" class="external-link">GitHub
+repository</a> of the project and listed below:</p>
 <ul><li>
 <strong>Samplesheets</strong>: Modeling of study metadata in the
 ISA-Tab format</li>
@@ -365,14 +350,14 @@ for local lookup</li>
 <li>
 <strong>Taskflowbackend</strong>: Run iRODS transactions with full
 rollback for project and file operations</li>
-</ul><p>The combinations of these apps allow the SODAR server results the
-following webpage:</p>
+</ul><p>These apps are presented to end-users via the SODAR
+web-application:</p>
 <p><img src="../fig/clipboard-3240582884.png" class="figure"> Figure 2: SODAR developers
 provide a demo instance at <a href="https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7" class="external-link">this
 url</a>.</p>
 </div>
-<div class="section level4">
-<h4 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a></h4>
+<div class="section level1">
+<h1 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a></h1>
 <p>iRODS stands for Integrated Rule-Oriented Data System, is the data
 management system that powers SODAR data and metadata management
 under-the-hood. Most user will not need to interact with iRODS directly.
@@ -397,14 +382,12 @@ can have multiple replicas, which are exact copies of the file stored in
 different locations2</p>
 <p>IRODs server has many features that are beyond the scope of this
 material.</p>
-</div>
 <div class="section level4">
 <h4 id="davrods">Davrods<a class="anchor" aria-label="anchor" href="#davrods"></a></h4>
 <p>Davrods provides access to iRODS servers using the WebDAV protocol, a
 similar protocol to the one used by the CardioCloud. This feature
 enables users to link external tools, such as Jupyter notebooks,
 Integrated Genome Viewer (IGV), and Galaxy tools.</p>
-</div>
 </div>
 <div class="section level3">
 <h3 id="sodar-naming-and-concepts">SODAR naming and concepts<a class="anchor" aria-label="anchor" href="#sodar-naming-and-concepts"></a></h3>
@@ -419,7 +402,7 @@ vertical navigation bar with various options such as “Project Overview”,
 and once a project is selected, “Sample Sheets”, “Landing Zones”,
 “Timeline,” and “Members.”</p></li>
 <li><p><strong>Navigation Topbar:</strong> A <em>search</em> bar, enable
-project or metadata search. <em>Manual</em>,a link to the SODAR
+project or metadata search. <em>Help</em>, a link to the SODAR
 documentation. <em>User menu</em> drop-down so users access
 configurations and general information.</p></li>
 <li><p><strong>Main Panel</strong>: The bulk of the UI consists of the
@@ -474,47 +457,82 @@ objects and applications.</p>
 </div>
 <div class="section level4">
 <h4 id="rest-api">REST-API<a class="anchor" aria-label="anchor" href="#rest-api"></a></h4>
-<p>TODO</p>
+<p>The SODAR server contains REST-API that allow the automation of
+various process by server admins.</p>
 </div>
 </div>
 <div class="section level3">
 <h3 id="sodar-data-workflow-step-by-step-usage">SODAR data workflow step-by-step usage<a class="anchor" aria-label="anchor" href="#sodar-data-workflow-step-by-step-usage"></a></h3>
 <p><img src="../fig/clipboard-3042118772.png" width="847" class="figure"> Figure 4.
 SODAR data workflow.</p>
-<ol style="list-style-type: decimal"><li><p>Create a project <a href="https://sodar-test.dieterichlab.org/project/project/create" class="external-link uri">https://sodar-test.dieterichlab.org/project/project/create</a></p></li>
-<li><p>Create a subproject <a href="https://sodar-test.dieterichlab.org/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar-test.dieterichlab.org/project/project/create/</a>&lt;project_uid&gt;</p></li>
+<ol style="list-style-type: decimal"><li><p>Login into SODAR. Then create a project <a href="https://sodar.crc1550.com/project/project/create" class="external-link uri">https://sodar.crc1550.com/project/project/create</a>.</p></li>
+<li><p>Create a subproject <a href="https://sodar.crc1550.com/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar.crc1550.com/project/project/create/</a>&lt;project_uid&gt;.</p></li>
+<li><p>Create a sample sheet: Sample sheets &gt; Sheet operations &gt;
+Create from template and <code>Select ISA-Tab Template</code>.</p></li>
+<li><p>Activate the irods server on Sample Sheet section.</p></li>
 <li>
-<p>Create a sample sheet: Sample sheets &gt; Sheet operations &gt;
-Create from template</p>
-<ol style="list-style-type: decimal"><li>Select ISA-Tab Template (Bulk RNA sequencing ISA-tab template)</li>
-<li>Import Sample Sheets from ISA-Tab</li>
-</ol></li>
-<li><p>Activate the irods server on Sample Sheet section</p></li>
-<li>
-<p>Upload files</p>
+<p>Files will be uploaded by the data management team. These are the
+options:</p>
 <ol style="list-style-type: decimal"><li><p>Use &lt;<a href="https://github.com/bihealth/cubi-tk" class="external-link">cubi-tk</a>
 <a href="https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/docs_manual/man_sodar_ingest.rst#L4" class="external-link">sodar
 ingest</a>&gt; cubi-tk sodar ingest –sodar-url <url> –sodar-api-token
 <api_token><file><landing_zone_uid></landing_zone_uid></file></api_token></url></p></li>
 <li><p>Use iRODs &lt;<a href="https://docs.irods.org/master/icommands/user/#iput" class="external-link">iput</a>&gt;</p></li>
 </ol></li>
-<li><p>Call SODAR validation</p></li>
+<li><p>Call SODAR validation to check whether the data upload was
+successful.</p></li>
+<li><p>Modify or fix any entries, if required.</p></li>
 </ol></div>
-</section><section id="faq-and-pratical-notes"><h2 class="section-heading">FAQ and pratical notes:<a class="anchor" aria-label="anchor" href="#faq-and-pratical-notes"></a>
-</h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a></h3>
-<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
+<div class="section level3">
+<h3 id="creating-and-filling-a-sample-sheet">Creating and filling a sample sheet<a class="anchor" aria-label="anchor" href="#creating-and-filling-a-sample-sheet"></a></h3>
+<ol style="list-style-type: decimal"><li>Pick <code>Sample Sheets</code> on left column.</li>
+<li>On Sheet operation, select create from template</li>
+</ol><figure><img src="../images/clipboard-1391538419.png" class="figure mx-auto d-block"></figure><ol start="3" style="list-style-type: decimal"><li>Select an ISA-Tab template</li>
+</ol><figure><img src="../images/clipboard-2875853019.png" class="figure mx-auto d-block"></figure><ol start="4" style="list-style-type: decimal"><li>Fill the form:</li>
+</ol><figure><img src="../images/clipboard-934212931.png" class="figure mx-auto d-block"></figure><div id="note" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
+<div id="note" class="callout-inner">
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
+</h3>
+<div class="callout-content">
+<p>The current templates are not fully optimized for our use-case. Fell
+free to reach out to the data management team if you have question,
+concerns or suggestions.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="standard-operating-procedure-for-data-and-metadata-registry-with-sodar-service">Standard Operating Procedure for Data and Metadata Registry with
+SODAR Service<a class="anchor" aria-label="anchor" href="#standard-operating-procedure-for-data-and-metadata-registry-with-sodar-service"></a></h4>
+<p>The SOP is available here: <a href="https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP" class="external-link uri">https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP</a></p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<p>1. <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
+on SODAR data transfer</a></p>
+<p>2. <a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
+approach used for data transfer</a></p>
+<ol style="list-style-type: decimal"><li><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
+overview</a></li>
+</ol></div>
+<div class="section level2">
+<h2 id="section"></h2>
+</div>
+</div>
+<div class="section level1">
+<h1 id="faq-and-practical-notes">FAQ and practical notes:<a class="anchor" aria-label="anchor" href="#faq-and-practical-notes"></a></h1>
+<div class="section level2">
+<h2 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a></h2>
+<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
 <div class="section level3">
 <h3 id="why-cubi-tk-sodar-ingest-fasq-is-not-working">Why &lt;cubi-tk sodar ingest-fasq&gt; is not working?<a class="anchor" aria-label="anchor" href="#why-cubi-tk-sodar-ingest-fasq-is-not-working"></a></h3>
 <p>The cubi-tk is a command line tool that allows to interact with SODAR
 server. The command <code>cubi-tk sodar ingest-fasq</code> because of
 configuration error. Use &lt;cubi-tk sodar ingest&gt;. See
 implementation details on <a href="https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/cubi_tk/sodar/ingest.py" class="external-link">cubi-tk</a>.</p>
-<p>? URL for sheet synchronization</p>
-<p>? iRODS public access ticket</p>
-<p>? IGV session genome</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -523,7 +541,8 @@ implementation details on <a href="https://github.com/bihealth/cubi-tk/blob/0f7f
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>TODO</li>
+<ul><li>SODAR is a user friendly data management solution that adheres to
+the FAIR framework.</li>
 </ul></div>
 </div>
 </div>
@@ -532,19 +551,24 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</section></div> <!-- / div.lesson-content -->
+</div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/fair-principles.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/data_management_plan.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/sra.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/fair-principles.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: fair_principles
+          Previous: FAIR Principles in
         </a>
-        <a class="chapter-link float-end" href="../instructor/data_management_plan.html" rel="next">
-          Next: Data Management... 
+        <a class="chapter-link float-end" href="../instructor/sra.html" rel="next">
+          Next: SRA... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -590,8 +614,8 @@ any links that you are not going to use.
   "url": "https://tbrittoborges.github.io/omics_metadata/instructor/sodar.html",
   "identifier": "https://tbrittoborges.github.io/omics_metadata/instructor/sodar.html",
   "dateCreated": "2024-02-14",
-  "dateModified": "2024-05-14",
-  "datePublished": "2024-05-14"
+  "dateModified": "2024-05-17",
+  "datePublished": "2024-05-17"
 }
 
   </script><script>

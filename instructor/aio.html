@@ -198,7 +198,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="bionfo_primer.html">2. Primer in Bioinformatics</a>
+        <a href="bionfo_primer.html">2. An introduction to bioinformatics file formats.</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -210,7 +210,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="fair-principles.html">3. fair_principles</a>
+        <a href="fair-principles.html">3. FAIR Principles in OMICs Research</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -234,19 +234,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="data_management_plan.html">5. Data Management Plan</a>
-    </div>
-<!--/div.accordion-header-->
-        
-  </div>
-<!--/div.accordion-item-->
-</div>
-<!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="sra.html">6. SRA</a>
+        <a href="sra.html">5. SRA</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -312,7 +300,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Preamble to Data Management Plan</a></p>
 <hr>
-<p>Last updated on 2024-05-14 |
+<p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -327,7 +315,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>None</li>
+<li>What is Metadata?</li>
+<li>How to describe metadata?</li>
+<li>What is the difference between data and metadata?</li>
 </ul>
 </div>
 </div>
@@ -337,10 +327,8 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>What is Metadata?</li>
-<li>What is the differentiate between data and metadata.</li>
-<li>Data management and metadata standardization.</li>
-<li>Understanding its importance in OMICs experiments.</li>
+<li>Defining data management plan.</li>
+<li>Understanding its importance applied to OMICs experiments.</li>
 </ul>
 </div>
 </div>
@@ -350,14 +338,13 @@
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>In this lesson, we will learn about metadata and its importance in
-data analysis. We will learn about the different types of metadata and
-how it is used to provide context and meaning to data. We will also
-learn about the importance of metadata standardization and how it can
-help to improve data management and data analysis. Finally, we will
-learn about the importance of metadata in OMICs experiments and how it
-can help to improve the reproducibility and reliability of research
-results.</p>
+<p>In this lesson, we will learn about metadata and its importance. We
+will learn about the different types of metadata and how it is used to
+provide context and meaning to data. We will also learn about the
+importance of metadata standardization and how it can help to improve
+data management and data analysis. Finally, we will learn about the
+importance of metadata in OMICs experiments and how it can help to
+improve the reproducibility and reliability of research results.</p>
 <div class="section level3">
 <h3 id="what-is-metadata">What is Metadata?<a class="anchor" aria-label="anchor" href="#what-is-metadata"></a>
 </h3>
@@ -377,19 +364,151 @@ questions and to make decisions. Metadata is the information that
 describes the data. It is the information that provides context and
 meaning to the data. It is used to help users understand the data and to
 help them make informed decisions about how to use it.</p>
-<p>An every day analogy is digital photography. Every time you take a
+<p>An everyday analogy is digital photography. Every time you take a
 photo with a digital camera, a range of “behind-the-scenes” information
 is saved along with the image data. This is known as metadata, and it
-can include details of the camera, lens and shooting settings used, plus
-optional information about the photographer, location and more.</p>
+can include details of the camera, lens, and shooting settings used,
+plus optional information about the photographer, location and more.
+Similarly, every experiment generates data, and contains metadata.</p>
+<p>An experimental protocol, for example, is considered part of the
+metadata of an experiment. There are different levels of metadata, which
+will be discussed in more detail once we discuss the ISA (Investigation,
+Study and Assay) framework.</p>
+</div>
+</section><section id="data-management-plan"><h2 class="section-heading">Data management plan<a class="anchor" aria-label="anchor" href="#data-management-plan"></a>
+</h2>
+<hr class="half-width">
+<p>A data management plan (DMP) is a document that outlines how data
+will be handled throughout a research project. It explains how to
+collect, organize, store, and share data, as well as ways to make sure
+that data is safe and meets legal and ethical standards. The DMP aims to
+enhance the accessibility, usability, and reproducibility of the data,
+as detailed below.</p>
+<div class="section level3">
+<h3 id="goals-of-data-management-plan">Goals of data management plan<a class="anchor" aria-label="anchor" href="#goals-of-data-management-plan"></a>
+</h3>
+<p>Here we define the goals of a data management plan in context to the
+FAIR framework:</p>
+<ul>
+<li>Automated deposition of data and metadata to public repositories
+(findability).</li>
+<li>Ensure that data is stored in a format that is easily accessible and
+usable (accessibility).</li>
+<li>Define consistent terminologies and controlled vocabularies to
+represent the data (interoperability).</li>
+<li>Ensure that data is stored in a secure and reliable manner
+(reusability).</li>
+</ul>
 </div>
 <div class="section level3">
-<h3 id="data-management-and-metadata-standardization">Data Management and Metadata Standardization<a class="anchor" aria-label="anchor" href="#data-management-and-metadata-standardization"></a>
+<h3 id="roles-and-responsibilities">Roles and responsibilities<a class="anchor" aria-label="anchor" href="#roles-and-responsibilities"></a>
 </h3>
-<p>Metadata standardization is the process of defining and implementing
-a set of rules and guidelines for the creation, management, and use of
-metadata. It is used to ensure that metadata is reliable. It is used to
-help users find, access, and use data more effectively.</p>
+<ul>
+<li>Data owners: Persons responsible for generating the data and
+metadata.</li>
+<li>Data managers: The person responsible for managing the data and
+metadata.
+<!-- - Data stewards: The person responsible for ensuring that the data and metadata are accurate and reliable. -->
+</li>
+<li>Data users: The person responsible for using the data and metadata
+to answer research questions and make decisions.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="benefits-of-data-management-and-metadata-standardization">Benefits of Data Management and Metadata Standardization<a class="anchor" aria-label="anchor" href="#benefits-of-data-management-and-metadata-standardization"></a>
+</h3>
+<ul>
+<li>Increase impact and visibility of research.</li>
+<li>Assigns clear responsibilities for data management tasks such as
+storage, backup, and controlled sharing.</li>
+<li>Standardizes data and metadata to facilitate collaboration using
+consistent terminologies and controlled vocabularies.</li>
+<li>Promotes collaboration within the CRC and with external partners,
+supporting method development and data reuse.</li>
+<li>Ensures compliance with funder requirements.</li>
+<li>Facilitates efficient interoperability among infrastructure
+teams.</li>
+<li>Enable audit trail of data and metadata changes.</li>
+</ul>
+</div>
+</section><section id="metadata-management-plan-and-fair-framewok"><h2 class="section-heading">Metadata management plan and FAIR framewok<a class="anchor" aria-label="anchor" href="#metadata-management-plan-and-fair-framewok"></a>
+</h2>
+<hr class="half-width">
+<p>In this document we outline the strategies and procedures for
+managing high-throughput data within the CRC1550’s integrated
+infrastructure. The CRC-INF plan is centered on the consolidation of
+interfaces, procedures, and interoperability standards (Aim 1) and the
+development of generic bioinformatics workflows for the standard
+analysis of multimodal data sets from CRC projects (Aim 2). The primary
+objective of the data management team is to ensure the efficient
+management of unprocessed and processed data produced by high-throughput
+experiments by providing services (and interfaces) to manage and store
+data and metadata.</p>
+<figure><img src="https://lh7-us.googleusercontent.com/HIZrk0S_WDLJXpKYFcl6BfZY5or_grINIHr6JNW_5mZmpb3xLxy6_aQEcPiEAmGwL_pS6LpaJ9aPpHUEbDZ-DSDUpPtE_cciZNdvwZGSsqYUJ9br8Bzr_bacQ2UdG1-WFKlsMBUu9LBpergxc4EtppU" class="figure mx-auto d-block"></figure><p>There are three working groups: - The BioBanking working group is
+responsible for the collection, storage, and management of biological
+samples. - The Data Management working group. - The bioinformatics
+working group is responsible for the analysis of high-throughput
+data.</p>
+<p>This course is focused on the Data Management working group.</p>
+<div class="section level3">
+<h3 id="findability">Findability<a class="anchor" aria-label="anchor" href="#findability"></a>
+</h3>
+<p>Metadata and data should be easily discoverable by both humans and
+machines. To ensure findability, each data object must have a unique and
+persistent identifier: - Data objects must be re-findable at any time,
+with an emphasis on maintaining persistent metadata. - Each data object
+should include basic machine-readable metadata to differentiate it from
+other objects. - Identifiers for concepts used in data objects must be
+unique and persistent.</p>
+</div>
+<div class="section level3">
+<h3 id="accessibility">Accessibility<a class="anchor" aria-label="anchor" href="#accessibility"></a>
+</h3>
+<p>After finding data, it’s crucial to understand the conditions for
+accessing them. Data should be accessible to both machines and
+humans:</p>
+<ul>
+<li>With proper authorization.</li>
+<li>Via a well-defined protocol.</li>
+</ul>
+<p>This ensures that both machines and humans can determine the actual
+accessibility of each data object.</p>
+</div>
+<div class="section level3">
+<h3 id="interoperability">Interoperability<a class="anchor" aria-label="anchor" href="#interoperability"></a>
+</h3>
+<p>Data needs to be processed and, often, be integrated with other data
+sets and be compatible with various applications or workflows for
+analysis, storage, and processing.</p>
+<p>Data objects are interoperable if: - The (meta)data is
+machine-actionable. - The (meta)data formats use shared vocabularies or
+ontologies. - The (meta)data within the data object is both
+syntactically parsable and semantically machine-accessible.</p>
+</div>
+<div class="section level3">
+<h3 id="reusability">Reusability<a class="anchor" aria-label="anchor" href="#reusability"></a>
+</h3>
+<p>The ultimate goal is to optimize the reuse of data, requiring that
+metadata and data be well-described for use, replication, and
+combination in various settings.</p>
+<p>For data objects to be reusable, they must:</p>
+<ul>
+<li>Comply with principles of findability, accessibility, and
+interoperability.</li>
+<li>Be sufficiently well-described and rich in metadata to allow
+automatic linking or integration with relevant data sources, with
+minimal human effort.</li>
+<li>Include rich metadata and provenance information for proper citation
+of published data objects and their sources.</li>
+</ul>
+</div>
+</section><section id="conclusions"><h2 class="section-heading">Conclusions<a class="anchor" aria-label="anchor" href="#conclusions"></a>
+</h2>
+<hr class="half-width">
+<p>Data and metadata standardization and description involves
+establishing and applying rules and guidelines for creating, managing,
+and using metadata. This process ensures that metadata is reliable and
+helps users more effectively find, access, and utilize data.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -399,10 +518,14 @@ help users find, access, and use data more effectively.</p>
 </h3>
 <div class="callout-content">
 <ul>
-<li>Data and metadata are important components of any data analysis
-pipeline.</li>
-<li>Metadata standardization is critical for reliable results.</li>
-<li>Data management plan and metadata enables data FAIRification.</li>
+<li>Data management plan execution enables data FAIRification.</li>
+<li>Metadata standardization is critical for reliable results and
+reproducibility.</li>
+<li>There are three roles in data management: data owners, managers, and
+users.</li>
+<li>Data management and metadata standardization provide numerous
+benefits that enhance the overall quality, usability, and impact of
+research data.</li>
 </ul>
 </div>
 </div>
@@ -411,10 +534,9 @@ pipeline.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</div>
-</section></section><section id="aio-bionfo_primer"><p>Content from <a href="bionfo_primer.html">Primer in Bioinformatics</a></p>
+</section></section><section id="aio-bionfo_primer"><p>Content from <a href="bionfo_primer.html">An introduction to bioinformatics file formats.</a></p>
 <hr>
-<p>Last updated on 2024-05-14 |
+<p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/bionfo_primer.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -429,7 +551,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>None.</li>
+<li>What are the different files formats used in bioinformatics?</li>
+<li>Differences between raw and processed data sets.</li>
 </ul>
 </div>
 </div>
@@ -439,9 +562,8 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Introduce the idea of OMICs and explain why they are important in
-bioinformatics.</li>
-<li>Familiarize with commonly used file formats</li>
+<li>Introduce the idea of OMICs experiments.</li>
+<li>Familiarize with commonly used file formats and concepts.</li>
 <li>Understanding the multilayered nature of metadata from OMICs
 experiments.</li>
 </ul>
@@ -450,13 +572,31 @@ experiments.</li>
 </div>
 </div>
 </div>
-<p><strong>Introduction</strong>: OMICs technologies provide unbiased
-measurements of molecular entities in biological samples. These
-measurements allow for a comprehensive exploration of functions and
-association of such entities. The extensive utilization of OMICs
-techniques resulted in the establishment of system biology, a branch of
-biology that aims to comprehend biological systems in their
-entirety.</p>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>OMICs technologies provide unbiased measurements of molecular
+entities in biological samples. These measurements allow for a
+comprehensive exploration of functions and association of such entities.
+System biology is a branch of biology that aims to comprehend biological
+systems in their entirety by the application of OMICs methods.</p>
+<div id="crc1550-focus" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="crc1550-focus" class="callout-inner">
+<h3 class="callout-title">CRC1550 focus<a class="anchor" aria-label="anchor" href="#crc1550-focus"></a>
+</h3>
+<div class="callout-content">
+<p>Within the CRC1550, the data management plan currently focuses on
+animal experiments, and the data generated from specific OMICs
+experiments. The data management plan is a living document that will be
+updated as the project progresses. Currently, we don’t consider data
+human data from patient samples, such as clinical data, or imaging data,
+which are current out of the scope of this material.</p>
+</div>
+</div>
+</div>
 <p><strong>OMICs</strong> is a collective term for a group of
 technologies that allow for the comprehensive analysis of biological
 molecules. These technologies include genomics, transcriptomics,
@@ -465,7 +605,7 @@ provides a unique perspective on the molecular composition of a
 biological sample, and together they allow for a comprehensive
 exploration of the functions and associations of biological
 molecules.</p>
-<section id="general-definition"><h2 class="section-heading">General definition<a class="anchor" aria-label="anchor" href="#general-definition"></a>
+</section><section id="general-definition"><h2 class="section-heading">General definition<a class="anchor" aria-label="anchor" href="#general-definition"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -494,36 +634,19 @@ processes.</li>
 </h2>
 <hr class="half-width">
 <p>There are a multitude of file formats used in bioinformatics, each
-with its own specific use case. Some of the most commonly used file
-formats include:</p>
-<p><strong>FASTQ format</strong> is a text-based format for storing both
-an oligonucleotide sequence and its corresponding quality scores.
-Obtained after base calling.</p>
-<p><strong>SAM/BAM/CRAM files</strong>: These are used to store sequence
-alignment data, and are used to represent the alignment of reads to a
-reference genome. SAM is a text-based format, while BAM is a binary
-version of the same format. CRAM is a compressed version of the BAM
-format.</p>
-<p><strong>PRIDE XML, mzIdentML, mzTab, and mzML</strong>: These file
-formats are used to store, process, and visualize mass
-spectrometry-based proteomics data deposited in the PRIDE Archive. PRIDE
-XML is the internal data format and submission format of PRIDE, while
-mzIdentML and mzTab are standard file formats for reporting
-peptide/protein identification and quantification results. Additionally,
-mzML is used to store the raw output files from mass spectrometers. Note
-that there are many different file formats for raw proteomics datasets,
-depending on the equipment vendor.</p>
-<p><strong>Raw sequencing formats:</strong> high-throughput machine such
-as Illumina, Nanopore, produce files before base calling. These files
-are in the form of binary files, and are not human-readable and depend
-on vendor-specific methods for signal processing.</p>
-<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
-</button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
-<div class="accordion-body">
+with its specific use case. Some of the most commonly used file formats
+include:</p>
+<p><strong>FASTQ format</strong>: is sequence data formats, a text-based
+format for storing both an oligonucleotide sequence and its
+corresponding quality scores. Obtained after base calling procedure.</p>
+<div id="fastq-file-format" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="fastq-file-format" class="callout-inner">
+<h3 class="callout-title">FASTQ file format<a class="anchor" aria-label="anchor" href="#fastq-file-format"></a>
+</h3>
+<div class="callout-content">
 <p>For bioinformatics workflow, the FASTQ format is often the initial
 step. This file format stores “reads”, or nucleotide sequences, along
 with their quality scores. Each sequence in a FASTQ file is represented
@@ -536,15 +659,69 @@ detailed information, please visit the Wikipedia page on <a href="https://en.wik
 </div>
 </div>
 </div>
-</div>
-<p>It is out of the scope of this lesson to detail all file formats used
-in bioinformatics, but it is important to understand that the different
+<p><strong>VCF/BCF</strong>: Stores genetic variation data, such as
+single nucleotide polymorphisms (SNPs) and insertions/deletions
+(indels).</p>
+<p><strong>SAM/BAM/CRAM files</strong>: These are used to store sequence
+alignment data, and are used to represent the alignment of reads to a
+reference genome. SAM is a text-based format, while BAM is a binary
+version of the same format. CRAM is a compressed version of the BAM
+format.</p>
+<p><strong>PRIDE XML, mzIdentML, mzTab, and mzML</strong>: These file
+formats are used to store, process, and visualize mass
+spectrometry-based proteomics data deposited in the PRIDE Archive.</p>
+<ul>
+<li>PRIDE XML: The internal data format and submission format for the
+PRIDE database, capturing comprehensive metadata and experimental
+details.</li>
+<li>mzIdentML: A standardized format for reporting peptide and protein
+identifications, including search results and confidence metrics.</li>
+<li>mzTab: A simpler, tab-delimited format for reporting
+identifications, quantification results, and metadata, designed for ease
+of use and flexibility.</li>
+<li>mzML: An XML-based open standard for storing raw mass spectrometry
+data, encompassing detailed spectral information and metadata.</li>
+</ul>
+<p><strong>Proprietary formats:</strong> high-throughput machine such as
+Illumina, Nanopore, produce files before base calling. These files are
+in the form of binary files, and are not human-readable and depend on
+vendor-specific methods for signal processing.</p>
+<p>Note that various proprietary formats are used for raw proteomics
+data depending on the equipment vendor.</p>
+<p><strong>Processed file formats:</strong> formats whom data has been
+processed and are ready for downstream analysis. These formats are often
+tabular, and can be easily imported into R or Python for further
+analysis. Examples include: - <strong>Tabular formats</strong>: csv,
+xlsx, tsv, and others. - <strong>RData</strong>: R-specific binary
+format for storing R objects. - <strong>HDF5</strong>: A data model,
+library, and file format for storing and managing large and complex
+data. - <strong>BED, GFF, and GTF</strong>: These are used to store
+genomic feature or annotations, such as gene locations, and
+structure.</p>
+<p>The scope of this lesson is to give an overview of file formats used
+in bioinformatics. It is important to understand that the different
 files a specific purpose, can be vendor-specific and that the choice of
 file format can have a significant impact on the downstream analysis of
 the data. For example, use of legacy vendor-specific format can limit
 the use of the data in modern bioinformatics pipelines, as proprietary
 programs may disappear. In general, it’s good practice to use
 open-source file formats.</p>
+<div id="raw-vs-processed-data" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="raw-vs-processed-data" class="callout-inner">
+<h3 class="callout-title">Raw vs processed data<a class="anchor" aria-label="anchor" href="#raw-vs-processed-data"></a>
+</h3>
+<div class="callout-content">
+<p>As a general rule of thumb, one can consider the raw data as the data
+that comes directly from the sequencing machine, and the processed data
+any data set derived from the raw data. The raw data is often in a
+format that is not human-readable, and requires specialized software to
+process. This definition may change depending on context.</p>
+</div>
+</div>
+</div>
 </section><section id="challenges-in-omics-data"><h2 class="section-heading">Challenges in OMICs data:<a class="anchor" aria-label="anchor" href="#challenges-in-omics-data"></a>
 </h2>
 <hr class="half-width">
@@ -560,32 +737,23 @@ order of 20 terabytes per year.</li>
 <strong>Data analysis</strong>: OMICs datasets are complex, and
 require specialized methods for analysis.</li>
 <li>
-<strong>Standardization</strong>: As there are many different file
-formats, there are many data standards and protocols used in OMICs
-research. This lack of standardization make it difficult to compare data
-between different labs.</li>
-<li>
-<strong>Ethical considerations</strong>: Handling of personal OMICs
-data requires careful consideration of ethical and legal issues, such as
-patient privacy and data sharing.</li>
+<strong>Standardization</strong>: As there are many file formats,
+there are many data standards and protocols used in OMICs research. This
+lack of standardization make it difficult to compare data between
+different centres.</li>
 <li>
 <strong>Data sharing</strong>: OMICs datasets are required to be
 shared upon publication.</li>
 </ul>
-<p>All the challenges can be mitigated through metadata use. Metadata is
-data that provides information about other data, or in other words, a
-detailed description of the data’s attribute. For example, for the data
-sharing challenge mentioned above, metadata can be used to find and
-filter datasets. This use-case is also interesting from the method
-development standpoint, as new methods can be used to analyze old data,
-but only if the data was properly described in terms of provenance and
-metadata. Metadata is essential for understanding the context of the
-data, and is used to help find and interpret the data. In the context of
-OMICs data, metadata can include information about the sample donor,
-sample, the experimental conditions, the data collection methods,
-protocols and the data analysis methods. Metadata is essential for
-reproducibility, as it allows others to understand and replicate the
-results of an experiment.</p>
+<p>All the challenges can be mitigated through the use of the meta data
+managing plan. Metadata is essential for understanding the context of
+the data, and is used to help find and interpret the data. In the
+context of OMICs data, metadata can include information about the sample
+donor, sample, the experimental conditions, the data collection methods,
+protocols and the data analysis methods. Results files can also contain
+metadata describing the processing steps used on the raw files. Metadata
+is essential for reproducibility, as it allows others to understand and
+replicate the results of experiments.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -595,8 +763,9 @@ results of an experiment.</p>
 </h3>
 <div class="callout-content">
 <ul>
-<li>OMICs technologies are crucial for a holistic understanding of
-biological systems.</li>
+<li>
+<strong>OMICs technologies</strong> are crucial for a holistic
+understanding of biological systems.</li>
 <li>Common file formats in bioinformatics serve specific purposes,
 facilitating data analysis and sharing.</li>
 <li>Metadata plays a critical role in contextualizing and modeling OMICs
@@ -609,12 +778,12 @@ data.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section><section id="aio-fair-principles"><p>Content from <a href="fair-principles.html">fair_principles</a></p>
+</section></section><section id="aio-fair-principles"><p>Content from <a href="fair-principles.html">FAIR Principles in OMICs Research</a></p>
 <hr>
-<p>Last updated on 2024-05-14 |
+<p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/fair-principles.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -626,7 +795,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>None</li>
+<li>What are action can we take for to make our data FAIR?</li>
 </ul>
 </div>
 </div>
@@ -636,13 +805,20 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how metadata plays a pivotal role in making data FAIR</li>
+<li>Action Learn actionable Explain how metadata standardization plays a
+pivotal role in making data FAIR</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div class="section level1">
+<h1 id="reminder-of-fair-framework">Reminder of FAIR framework<a class="anchor" aria-label="anchor" href="#reminder-of-fair-framework"></a>
+</h1>
+<p>This chapter aims to give a deep dive on FAIR framework and what
+solution our infrastructure team can provide using CardioCloud and
+SODAR.</p>
 <ul>
 <li>
 <strong>Findable</strong>: Metadata helps in uniquely identifying
@@ -658,129 +834,167 @@ data can be integrated with other datasets.</li>
 necessary for data to be reused effectively, including the conditions
 under which it can be reused.</li>
 </ul>
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
+<div class="section level2">
+<h2 id="findable">Findable<a class="anchor" aria-label="anchor" href="#findable"></a>
+</h2>
+<p>The “Findable” aspect of the FAIR principles emphasizes the need for
+data to be easily located and identified. This is the first step in
+ensuring that data can be used and reused effectively. Metadata plays a
+crucial role in making data findable by providing information about the
+data, such as its title, publication, author, and description. This
+information helps users to locate and identify the data they need for
+their research. Or describing sample location (left-ventricle vs. right
+ventricle), library preparation type (Poly-A enrichment vs. Ribo
+depletion).</p>
+<p>Another important aspect for findability is the use of persistent
+identifier. One every day aspect is nomenclature used for genes or
+proteins in manuscripts. While the use of nomenclature standards
+advanced, use of common names can lead to ambiguities or confusion. In
+that case, the use of persistent identifier, such as the <a href="http://www.ensembl.org/info/genome/stable_ids/index.html" class="external-link">Ensembl’s
+Stable IDs</a> or <a href="https://www.uniprot.org/help/accession_numbers" class="external-link">UniProt accession
+numbers</a> are preferred. The Digital Object identifier (<a href="https://dx.doi.org/" class="external-link">DOI</a>) is used to make data, software, and
+other research outputs easily citable and trackable.</p>
+<p>Metadata can also facilitate data discovery. For example, metadata
+can be used on</p>
+</div>
+<div class="section level2">
+<h2 id="accessible">Accessible<a class="anchor" aria-label="anchor" href="#accessible"></a>
+</h2>
+<p>Making data accessible to collaborators and the public increases its
+impact. Our INF aims to facilitate and automatize the limited or public
+distribution of data sets. The critical point is establishing user
+access with granularity.</p>
+<p>The Member Roles in SODAR are structured to provide varying levels of
+access and functionality within projects. Each user can hold only one
+role at a time within a category or project, with “project” serving as a
+generic term encompassing both categories and specific projects. The
+roles, listed in descending order of rights and functionality,
+include:</p>
 <ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
+<li><p><strong>Project Owner</strong>: Holds full access to project data
+and functionality, with the ability to assign roles, including
+delegates. They can transfer ownership to another user.</p></li>
+<li><p><strong>Project Delegate</strong>: Possesses full access to
+project data and functionality, except for modifying owner or delegate
+roles. This role can only be assigned by a project owner.</p></li>
+<li><p><strong>Project Contributor</strong>: Granted access to create
+and modify data within a project, such as uploading files and editing
+sample sheets, with certain limitations. They cannot modify project
+metadata or user roles.</p></li>
+<li><p><strong>Project Guest</strong>: Limited to read-only access to
+project data.</p></li>
+<li><p><strong>Project Finder</strong>: Exclusive to users in
+categories, allowing them to view child categories and projects, along
+with member lists, without accessing project data or apps. This role is
+useful for staff members who need an overview of the category and
+project structure.</p></li>
 </ol>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">
-<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
-<div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p>Role inheritance is implemented, with roles inherited from parent
+categories. These inherited roles can be promoted for the current
+category or project but cannot be demoted. Inherited roles are denoted
+in the member list, indicating the category from which the role is
+inherited.</p>
+<p>Additionally, each project must have one local owner who is not
+inherited.</p>
+<p>Moreover, standardized metadata can facilitate data users to find
+your data set on specialized search engines, such as <a href="https://www.ncbi.nlm.nih.gov/sra" class="external-link">Sequence Read Archive</a>, <a href="https://www.ebi.ac.uk/ena/browser/" class="external-link">European Nucleotide
+Archive</a>, and <a href="https://www.ncbi.nlm.nih.gov/geo/" class="external-link">Gene
+Expression Omnibus</a>, or other engines, such as the <a href="https://metasra.biostat.wisc.edu/" class="external-link">METASra</a> or the <a href="https://sra-explorer.info/" class="external-link">SRA explorer</a>. The more data users
+find your data set, the more likely it receives citations.</p>
 </div>
+<div class="section level2">
+<h2 id="interoperable">Interoperable<a class="anchor" aria-label="anchor" href="#interoperable"></a>
+</h2>
+<p>Data interoperability refers to the ability of different systems,
+organizations, and applications to access, exchange, and use data
+seamlessly and effectively. It ensures that data from diverse sources
+can be integrated and utilized cohesively, regardless of the differences
+in their formats, structures, or origins. For data to be interoperable,
+it must meet the following key criteria:</p>
+<ol style="list-style-type: decimal">
+<li>Machine-readable.</li>
+<li>Standardized formats and processing steps.</li>
+<li>Using common vocabularies and ontologies.</li>
+</ol>
+<p>Adhering to these criteria facilitates data use and integration, as
+well further analysis, such meta analysis or database inclusion. The
+main action here is selecting a common ontology to describe experiments.
+Please check this resource to see how ontologies work: <a href="https://www.ebi.ac.uk/ols4/search?q=left+ventricle" class="external-link">ols4 left
+ventricle query</a>.</p>
+<figure><img src="../fig/OLS4_lv_query.png" alt="OLS4 query for left ventricle." class="figure mx-auto d-block"><div class="figcaption">OLS4 query for left ventricle.</div>
+</figure>
 </div>
-</div>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+<div class="section level2">
+<h2 id="reusable">Reusable<a class="anchor" aria-label="anchor" href="#reusable"></a>
+</h2>
+<p>Data set reusability is the final goal of the FAIR framework.
+Reusability requires adhering to four key concepts:</p>
+<ul>
+<li>The data complies with the Findable, Accessible and Interoperable
+principles.</li>
+<li>Data and metadata can be validated.</li>
+<li>Data permission and licensing.</li>
+</ul>
+<div class="section level3">
+<h3 id="data-validation">Data validation<a class="anchor" aria-label="anchor" href="#data-validation"></a>
 </h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
+<p>Another important concept is providing standardized file formats and
+validating such files. Using MD5 checksums for file sharing and
+validation is important because it ensures data integrity. Before a file
+is shared, an MD5 checksum should be generated, which is a unique hash
+value representing the file’s content. The recipient can generate their
+own MD5 checksum for the received file and compare it with the original
+checksum. If the values match, it confirms that the file has not been
+altered or corrupted during transmission, ensuring the file’s integrity
+and authenticity.</p>
+<p>Here is an example of how to test a file checksum manually:</p>
 <div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"this is a text file."</span> <span class="op">&gt;</span> test_checksum.txt</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">cat</span> test_checksum.txt</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="op">&gt;</span> this <span class="ex">is</span> a text file.</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">md5sum</span> test_checksum.txt <span class="op">&gt;</span> test_checksum.md5</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">cat</span> test_checksum.md5</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="op">&gt;</span> bc8a22e96d2b46f583a8c5fb055de679  <span class="ex">test_checksum</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">md5sum</span> <span class="at">--check</span> test_checksum.md5</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="op">&gt;</span>test_checksum: <span class="ex">OK</span></span></code></pre>
 </div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">Output</h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<pre class="output" tabindex="0"><code>Error in running command bash</code></pre>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div class="section level3">
+<h3 id="data-licenses">Data licenses<a class="anchor" aria-label="anchor" href="#data-licenses"></a>
+</h3>
+<div id="disclaimer" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do-you-nest-solutions-within-challenge-blocks"></a>
+<div id="disclaimer" class="callout-inner">
+<h3 class="callout-title">Disclaimer<a class="anchor" aria-label="anchor" href="#disclaimer"></a>
 </h3>
 <div class="callout-content">
-
+<p>This section does not aim to discuss legal aspects of data sharing,
+but to provide an overview of the importance of data licenses. For legal
+advice, please consult a legal expert.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-<section id="figures"><h2 class="section-heading">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can include figures generated from R Markdown:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
-<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
-<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
-<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre>
-</div>
-<figure style="text-align: center"><img src="../fig/fair-principles-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
-Sun arise each and every morning
-</figcaption></figure><p>Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section id="math"><h2 class="section-heading">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Data licenses are legal instruments that define the terms and
+conditions under which data can be used, shared, and distributed. They
+provide a framework for data users to understand their rights and
+obligations when using data, including the permissions granted by the
+data provider and any restrictions on data use.</p>
+<p>In legal terms, data and software can only be re-used if it licensed.
+Data deposited to the SRA (Sequence Read Archive) is licensed under the
+<a href="https://www.ncbi.nlm.nih.gov/home/about/policies/" class="external-link">NCBI data
+use policy</a>. This license provides open access to raw sequencing
+data, including RNA-seq data, under the public domain license. This
+means the data can be freely used, modified, and shared by anyone for
+any purpose without restrictions.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -790,14 +1004,7 @@ this:</p>
 </h3>
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>The FAIR framework is central for data and metadata management.</li>
 </ul>
 </div>
 </div>
@@ -806,9 +1013,11 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section><section id="aio-sodar"><p>Content from <a href="sodar.html">SODAR: System for Omics Data Access and Retrieval.</a></p>
+</div>
+</div>
+</div></section><section id="aio-sodar"><p>Content from <a href="sodar.html">SODAR: System for Omics Data Access and Retrieval.</a></p>
 <hr>
-<p>Last updated on 2024-05-14 |
+<p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/sodar.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -823,7 +1032,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>None</li>
+<li>How to use SODAR for data and metadata entry?</li>
 </ul>
 </div>
 </div>
@@ -834,19 +1043,20 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Introduces SODAR</li>
-<li>Detail on main concepts of the tool</li>
-<li>How to use SODAR</li>
+<li>Oviewview of the main concepts</li>
+<li>How the process for data and metadata upload works within the
+CRC1550-INF</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section id="overview"><h2 class="section-heading">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h2>
-<hr class="half-width">
-<p><img src="../fig/SodarLogo.svg" class="figure"><strong>S</strong>ystem for
-<strong>O</strong>mics <strong>D</strong>ata <strong>A</strong>ccess and
+<div class="section level1">
+<h1 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h1>
+<figure><img src="../fig/SodarLogo.svg" class="figure mx-auto d-block"></figure><p><strong>S</strong>ystem for <strong>O</strong>mics
+<strong>D</strong>ata <strong>A</strong>ccess and
 <strong>R</strong>etrieval (<strong>SODAR</strong>) is a specialized
 system designed for managing data in OMICs research projects. The
 platform provides medical experts with a central location for navigating
@@ -864,21 +1074,22 @@ the <a href="https://www.cubi.bihealth.org/" class="external-link">Core Unit
 Bioinformatics</a> at the <a href="https://www.bihealth.org/" class="external-link">Berlin
 Institute of Health</a>. The software is written in Python 3 and freely
 available under the MIT license.</p>
-<div class="section level3">
-<h3 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a>
-</h3>
+</div>
+<div class="section level1">
+<h1 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a>
+</h1>
 <p><img src="../fig/clipboard-1870335311.png" class="figure"> Figure 1. Overview of data
 workflow with SODAR. The next sections will detail each component.</p>
-<div class="section level4">
-<h4 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a>
-</h4>
+</div>
+<div class="section level1">
+<h1 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a>
+</h1>
 <p>The SODAR server is the main component of the system. It comprises
 several modules called Django apps, which are responsible for different
 tasks. Although these apps are not the utmost importance for the users,
 understanding the available apps allows users to understand the full
-potential of the system. The main apps are detailed in the [GitHub
-repository][<a href="https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information" class="external-link uri">https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information</a>]
-of the project and listed below:</p>
+potential of the system. The main apps are detailed in the <a href="https://github.com/bihealth/sodar-server?tab=readme-ov-file#technical-information" class="external-link">GitHub
+repository</a> of the project and listed below:</p>
 <ul>
 <li>
 <strong>Samplesheets</strong>: Modeling of study metadata in the
@@ -901,15 +1112,15 @@ for local lookup</li>
 <strong>Taskflowbackend</strong>: Run iRODS transactions with full
 rollback for project and file operations</li>
 </ul>
-<p>The combinations of these apps allow the SODAR server results the
-following webpage:</p>
+<p>These apps are presented to end-users via the SODAR
+web-application:</p>
 <p><img src="../fig/clipboard-3240582884.png" class="figure"> Figure 2: SODAR developers
 provide a demo instance at <a href="https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7" class="external-link">this
 url</a>.</p>
 </div>
-<div class="section level4">
-<h4 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a>
-</h4>
+<div class="section level1">
+<h1 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a>
+</h1>
 <p>iRODS stands for Integrated Rule-Oriented Data System, is the data
 management system that powers SODAR data and metadata management
 under-the-hood. Most user will not need to interact with iRODS directly.
@@ -934,7 +1145,6 @@ can have multiple replicas, which are exact copies of the file stored in
 different locations2</p>
 <p>IRODs server has many features that are beyond the scope of this
 material.</p>
-</div>
 <div class="section level4">
 <h4 id="davrods">Davrods<a class="anchor" aria-label="anchor" href="#davrods"></a>
 </h4>
@@ -942,7 +1152,6 @@ material.</p>
 similar protocol to the one used by the CardioCloud. This feature
 enables users to link external tools, such as Jupyter notebooks,
 Integrated Genome Viewer (IGV), and Galaxy tools.</p>
-</div>
 </div>
 <div class="section level3">
 <h3 id="sodar-naming-and-concepts">SODAR naming and concepts<a class="anchor" aria-label="anchor" href="#sodar-naming-and-concepts"></a>
@@ -960,7 +1169,7 @@ vertical navigation bar with various options such as “Project Overview”,
 and once a project is selected, “Sample Sheets”, “Landing Zones”,
 “Timeline,” and “Members.”</p></li>
 <li><p><strong>Navigation Topbar:</strong> A <em>search</em> bar, enable
-project or metadata search. <em>Manual</em>,a link to the SODAR
+project or metadata search. <em>Help</em>, a link to the SODAR
 documentation. <em>User menu</em> drop-down so users access
 configurations and general information.</p></li>
 <li><p><strong>Main Panel</strong>: The bulk of the UI consists of the
@@ -1021,7 +1230,8 @@ objects and applications.</p>
 <div class="section level4">
 <h4 id="rest-api">REST-API<a class="anchor" aria-label="anchor" href="#rest-api"></a>
 </h4>
-<p>TODO</p>
+<p>The SODAR server contains REST-API that allow the automation of
+various process by server admins.</p>
 </div>
 </div>
 <div class="section level3">
@@ -1030,19 +1240,14 @@ objects and applications.</p>
 <p><img src="../fig/clipboard-3042118772.png" width="847" class="figure"> Figure 4.
 SODAR data workflow.</p>
 <ol style="list-style-type: decimal">
-<li><p>Create a project <a href="https://sodar-test.dieterichlab.org/project/project/create" class="external-link uri">https://sodar-test.dieterichlab.org/project/project/create</a></p></li>
-<li><p>Create a subproject <a href="https://sodar-test.dieterichlab.org/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar-test.dieterichlab.org/project/project/create/</a>&lt;project_uid&gt;</p></li>
+<li><p>Login into SODAR. Then create a project <a href="https://sodar.crc1550.com/project/project/create" class="external-link uri">https://sodar.crc1550.com/project/project/create</a>.</p></li>
+<li><p>Create a subproject <a href="https://sodar.crc1550.com/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar.crc1550.com/project/project/create/</a>&lt;project_uid&gt;.</p></li>
+<li><p>Create a sample sheet: Sample sheets &gt; Sheet operations &gt;
+Create from template and <code>Select ISA-Tab Template</code>.</p></li>
+<li><p>Activate the irods server on Sample Sheet section.</p></li>
 <li>
-<p>Create a sample sheet: Sample sheets &gt; Sheet operations &gt;
-Create from template</p>
-<ol style="list-style-type: decimal">
-<li>Select ISA-Tab Template (Bulk RNA sequencing ISA-tab template)</li>
-<li>Import Sample Sheets from ISA-Tab</li>
-</ol>
-</li>
-<li><p>Activate the irods server on Sample Sheet section</p></li>
-<li>
-<p>Upload files</p>
+<p>Files will be uploaded by the data management team. These are the
+options:</p>
 <ol style="list-style-type: decimal">
 <li><p>Use &lt;<a href="https://github.com/bihealth/cubi-tk" class="external-link">cubi-tk</a>
 <a href="https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/docs_manual/man_sodar_ingest.rst#L4" class="external-link">sodar
@@ -1051,17 +1256,68 @@ ingest</a>&gt; cubi-tk sodar ingest –sodar-url <url> –sodar-api-token
 <li><p>Use iRODs &lt;<a href="https://docs.irods.org/master/icommands/user/#iput" class="external-link">iput</a>&gt;</p></li>
 </ol>
 </li>
-<li><p>Call SODAR validation</p></li>
+<li><p>Call SODAR validation to check whether the data upload was
+successful.</p></li>
+<li><p>Modify or fix any entries, if required.</p></li>
 </ol>
 </div>
-</section><section id="faq-and-pratical-notes"><h2 class="section-heading">FAQ and pratical notes:<a class="anchor" aria-label="anchor" href="#faq-and-pratical-notes"></a>
-</h2>
-<hr class="half-width">
 <div class="section level3">
-<h3 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a>
+<h3 id="creating-and-filling-a-sample-sheet">Creating and filling a sample sheet<a class="anchor" aria-label="anchor" href="#creating-and-filling-a-sample-sheet"></a>
 </h3>
-<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
+<ol style="list-style-type: decimal">
+<li>Pick <code>Sample Sheets</code> on left column.</li>
+<li>On Sheet operation, select create from template</li>
+</ol>
+<figure><img src="../images/clipboard-1391538419.png" class="figure mx-auto d-block"></figure><ol start="3" style="list-style-type: decimal">
+<li>Select an ISA-Tab template</li>
+</ol>
+<figure><img src="../images/clipboard-2875853019.png" class="figure mx-auto d-block"></figure><ol start="4" style="list-style-type: decimal">
+<li>Fill the form:</li>
+</ol>
+<figure><img src="../images/clipboard-934212931.png" class="figure mx-auto d-block"></figure><div id="note" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
+<div id="note" class="callout-inner">
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
+</h3>
+<div class="callout-content">
+<p>The current templates are not fully optimized for our use-case. Fell
+free to reach out to the data management team if you have question,
+concerns or suggestions.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="standard-operating-procedure-for-data-and-metadata-registry-with-sodar-service">Standard Operating Procedure for Data and Metadata Registry with
+SODAR Service<a class="anchor" aria-label="anchor" href="#standard-operating-procedure-for-data-and-metadata-registry-with-sodar-service"></a>
+</h4>
+<p>The SOP is available here: <a href="https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP" class="external-link uri">https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP</a></p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<p>1. <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
+on SODAR data transfer</a></p>
+<p>2. <a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
+approach used for data transfer</a></p>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
+overview</a></li>
+</ol>
+</div>
+<div class="section level2">
+<h2 id="section"></h2>
+</div>
+</div>
+<div class="section level1">
+<h1 id="faq-and-practical-notes">FAQ and practical notes:<a class="anchor" aria-label="anchor" href="#faq-and-practical-notes"></a>
+</h1>
+<div class="section level2">
+<h2 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a>
+</h2>
+<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
 <div class="section level3">
 <h3 id="why-cubi-tk-sodar-ingest-fasq-is-not-working">Why &lt;cubi-tk sodar ingest-fasq&gt; is not working?<a class="anchor" aria-label="anchor" href="#why-cubi-tk-sodar-ingest-fasq-is-not-working"></a>
 </h3>
@@ -1069,9 +1325,6 @@ ingest</a>&gt; cubi-tk sodar ingest –sodar-url <url> –sodar-api-token
 server. The command <code>cubi-tk sodar ingest-fasq</code> because of
 configuration error. Use &lt;cubi-tk sodar ingest&gt;. See
 implementation details on <a href="https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/cubi_tk/sodar/ingest.py" class="external-link">cubi-tk</a>.</p>
-<p>? URL for sheet synchronization</p>
-<p>? iRODS public access ticket</p>
-<p>? IGV session genome</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1081,7 +1334,8 @@ implementation details on <a href="https://github.com/bihealth/cubi-tk/blob/0f7f
 </h3>
 <div class="callout-content">
 <ul>
-<li>TODO</li>
+<li>SODAR is a user friendly data management solution that adheres to
+the FAIR framework.</li>
 </ul>
 </div>
 </div>
@@ -1091,221 +1345,10 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</section></section><section id="aio-data_management_plan"><p>Content from <a href="data_management_plan.html">Data Management Plan</a></p>
+</div>
+</div></section><section id="aio-sra"><p>Content from <a href="sra.html">SRA</a></p>
 <hr>
-<p>Last updated on 2024-05-14 |
-        
-        <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/data_management_plan.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>None</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Establishing a data management strategy within the CRC.</li>
-<li>Detailing roles and responsibilities for data management.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section id="overview"><h2 class="section-heading">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h2>
-<hr class="half-width">
-<p>This Data Management Plan outlines the strategies and procedures for
-managing high-throughput data within the CRC1550’s integrated
-infrastructure. The CRC-INF plan is centered on the consolidation of
-interfaces, procedures, and interoperability standards (Aim 1) and the
-development of generic bioinformatics workflows for the standard
-analysis of multimodal data sets from CRC projects (Aim 2). The primary
-objective of the data management team is to ensure the efficient
-management of unprocessed and processed data produced by high-throughput
-experiments by providing services (and interfaces) to manage and store
-data and metadata.</p>
-<figure><img src="https://lh7-us.googleusercontent.com/HIZrk0S_WDLJXpKYFcl6BfZY5or_grINIHr6JNW_5mZmpb3xLxy6_aQEcPiEAmGwL_pS6LpaJ9aPpHUEbDZ-DSDUpPtE_cciZNdvwZGSsqYUJ9br8Bzr_bacQ2UdG1-WFKlsMBUu9LBpergxc4EtppU" class="figure mx-auto d-block"></figure><p>The data generated in high-throughput experiments can be categorized
-into two main types:</p>
-<p><strong>Unprocessed (or raw) data</strong> refers to the unprocessed
-data directly obtained from high-throughput experiments. This includes
-the output from sequencing machines. The data management team will
-establish protocols for the collection, storage, and initial processing
-of raw data to ensure its integrity and reliability. There is a general
-rule of thumb for </p>
-<p><strong>Processed data</strong> represents the results obtained after
-applying various bioinformatics and statistical analysis techniques to
-the raw data. This includes sequences filtered by quality, identified
-genetic variants, and derived annotations, such as genes called
-differentially expressed. The data management team will work closely
-with the bioinformatics team to establish workflows and standardize
-processing methods to ensure consistent and reproducible results.</p>
-<div class="section level3">
-<h3 id="roles-and-responsibilities">
-<strong>Roles and responsibilities</strong><a class="anchor" aria-label="anchor" href="#roles-and-responsibilities"></a>
-</h3>
-<p>The data owner and data manager must work together to ensure data
-flow, documentation, and data management best practices throughout the
-project. To keep high-throughput data secure, accessible, and usable,
-these roles must communicate regularly.</p>
-<p><br><br></p>
-<p><strong>Data Owner</strong>:</p>
-<p><br></p>
-<ul>
-<li><p>High-throughput experiment data transfer: The data owner
-transfers primary data from high-throughput experiments to the data
-management team. This includes organizing and documenting data.</p></li>
-<li><p>Access control change communication: The data owner should notify
-the infrastructure management team of access control changes. This
-ensures project-compliant access permissions.</p></li>
-<li><p>In case of record update: The data owner must keep data and
-metadata up-to-date. Throughout the project lifecycle, document data and
-metadata changes. Data integrity and completeness should be ensured by
-the data owner and manager.</p></li>
-</ul>
-<p><br></p>
-<p><strong>Data Manager:</strong></p>
-<p><br></p>
-<ul>
-<li><p>Validates high-throughput data and metadata, this involves
-checking the data owner’s metadata for MINSEQE and ISA compliance,
-inconsistencies, and missing information.</p></li>
-<li><p>Storage and Backup. The data manager stores and backs up raw
-data, processed data, and metadata. To preserve data and recover from
-disasters, this requires proper storage systems, data organization, and
-regular backups.</p></li>
-<li><p>Maintain a healthy data management system. This includes system
-monitoring, troubleshooting, and updating software and security
-patches.</p></li>
-<li><p>The data manager transfers data and metadata from the data
-management system to bioinformatics teams or other stakeholders. This
-may involve exporting data in required formats, ensuring data integrity
-during transfer, and working with bioinformatics teams to meet their
-needs.</p></li>
-</ul>
-</div>
-</section><section id="managing-metadata"><h2 class="section-heading">Managing metadata <a class="anchor" aria-label="anchor" href="#managing-metadata"></a>
-</h2>
-<hr class="half-width">
-<p>To enable the unambiguous interpretation and facilitate the
-reproducibility of experiment results, we will adopt the Minimum
-Information about a high-throughput nucleotide SEQuencing Experiment
-(<strong>MINSEQE</strong>) guidelines. These guidelines provide a
-framework for capturing essential metadata associated with
-high-throughput experiments and are the recommended community standard.
-Similar to the MIAME guidelines for microarray experiments, MINSEQE will
-be followed to ensure comprehensive metadata collection and consists of
-the following items:</p>
-<ul>
-<li><p>metadata</p></li>
-<li><p>sequence read data</p></li>
-<li><p>final processed data </p></li>
-<li><p>experimental protocols</p></li>
-</ul>
-<p><br></p>
-<p><strong>ISA framework</strong>: this framework aims to simplify </p>
-<ul>
-<li><p><strong>I</strong>nvestigation: the project context</p></li>
-<li><p><strong>S</strong>tudy: a unit of research</p></li>
-<li><p><strong>A</strong>ssay: analytical measurement</p></li>
-</ul>
-<p><br></p>
-<p><strong>Data Portal</strong></p>
-<p>Task: provide granularity access control to certain data. Initially,
-data is available only to data owners. After authorization, data should
-be made internally and openly accessible. </p>
-<p><br></p>
-<p><strong>Making metadata interoperable</strong></p>
-<p>Task: To enhance the interoperability of metadata, the data
-management team will utilize standardized metadata formats, such as XML
-or JSON, and adopt controlled vocabularies and ontologies where
-applicable. This will enable efficient data discovery, integration, and
-sharing across different projects and platforms.</p>
-<p><br><br></p>
-<p><strong>Data security and backup</strong></p>
-<p>Task<strong>:</strong> we will establish protocols for data security
-and backup to ensure that data is protected against loss or corruption.
-The protocols will include measures for data backup.</p>
-<p><br></p>
-<p><strong>Ethical aspect</strong></p>
-<p>Currently, we only store data obtained from animal samples for
-genetic and disease modeling. Therefore, there are no ethical or legal
-issues that can affect data sharing, assuming a vote on animal ethics
-has been obtained by the data provider.</p>
-<p><br></p>
-<p><strong>Costs</strong></p>
-<p>The data management team will allocate appropriate resources,
-including storage infrastructure, computational power, and personnel, to
-support the storage and metadata processing. Regular assessments will be
-conducted to ensure the scalability and sustainability of the
-infrastructure and its services.</p>
-<p><br></p>
-<p><strong>OpenBis</strong></p>
-<p>To fulfill these tasks, we are using the Biological Information
-System (OpenBIS), a flexible and extensible data management system that
-can be utilized to accomplish several aspects of your Data Management
-Plan. Here’s how OpenBIS can be used to support the different
-sections:</p>
-<p>OpenBIS includes a web-based interface that can serve as a data
-portal. It allows authorized users to search, browse, and access data
-and metadata stored in the system. As a metadata management system, it
-provided a structured metadata model. We are working to define metadata
-templates based on the MINSEQE guidelines and the ISA framework within
-OpenBIS. This ensures that the required metadata fields are captured for
-each experiment, study, and assay. In addition, metadata quality
-checklist should be implemented </p>
-<p>The data portal can be customized to provide specific functionalities
-for data visualization and analysis, enabling users to perform basic
-data exploration tasks.</p>
-<p>The portal supports access control mechanisms, allowing us to define
-user roles and permissions. We can configure access restrictions to
-ensure that consortium members have the appropriate level of access to
-data and metadata within the system. OpenBIS enables collaboration by
-providing controlled sharing and collaboration features among authorized
-users. In addition, OpenBIS can integrate with public repositories that
-work as  external data sharing platforms, such as Zenodo, that generate
-persistent identifiers (e.g., DOI) for datasets, facilitating easy
-referencing and citation.</p>
-<p>OpenBIS includes built-in security features to protect data integrity
-and confidentiality. It supports user authentication and authorization,
-data encryption, and audit trails to track system activities.
-Additionally, OpenBIS can be integrated with backup systems to ensure
-regular data backups and disaster recovery.</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
-<div class="callout-content">
-<ul>
-<li>TODO</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
-</section></section><section id="aio-sra"><p>Content from <a href="sra.html">SRA</a></p>
-<hr>
-<p>Last updated on 2024-05-14 |
+<p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/sra.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1331,7 +1374,9 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Get to know the SRA database</li>
-<li>Understand the requiriments for data deposition</li>
+<li>Understand the requirements for data deposition</li>
+<li>Learn required optional field used for a RNA-sequencing
+experiment</li>
 </ul>
 </div>
 </div>
@@ -1341,18 +1386,21 @@ any links that you are not going to use.
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>The Sequence Read Archive is a public repository that contains
+<p>The Sequence Read Archive (SRA) is a public repository that contains
 high-throughput sequencing data. It is a part of the International
 Nucleotide Sequence Database Collaboration (INSDC), which includes
-several institutes. Data from all life forms is included in the
-repository, as well as metagenomics and ecological studies. SRA stores
-raw sequencing data and alignment. We use the SRA to deposit, which is
-usually mandatory as part of a paper publication.</p>
-<p>It aims to establish a central repository for next-generation
+several major institutes: the National Center for Biotechnology
+Information (NCBI) in the USA, the European Bioinformatics Institute
+(EBI) in Europe, and the DNA Data Bank of Japan (DDBJ) in Japan. The SRA
+includes data from all life forms, as well as metagenomics and
+ecological studies. The SRA stores raw sequencing data and sometimes the
+processed alignment data. Researchers often use the SRA to deposit their
+data, which is typically a requirement for the publication of research
+papers. It aims to establish a central repository for next-generation
 sequencing data, linking to resources that reference or utilize this
 data. The repository allows in tracking project metadata for studies and
 experiments. There’s a focus on facilitating flexible submission and
-retrieval of ancillary data providing normalized data structures.
+retrieval of ancillary data, providing normalized data structures.
 Additionally, the objectives include decoupling the submission process
 from content and laying the groundwork for interactive user submissions
 and data retrieval.</p>
@@ -1361,31 +1409,36 @@ and data retrieval.</p>
 <hr class="half-width">
 <p>SRA metadata concept separates experimental data from its metadata,
 organizing the latter into a structured hierarchy:</p>
-<p>— Study: Represents a collection of experiments aimed towards a
-common goal, serving as an overarching project that encapsulates the
-purpose and scope of the research conducted. — Experiment: Refers to a
-specific set of laboratory procedures applied to input material,
-designed to achieve an anticipated result. Each experiment is a
-component of a study, contributing to its overall objective. Can also be
-interpreted as a series of experimental protocols. — Sample: The focus
-of an experiment, which can be a single sample or multiple samples
-grouped together. The results of an experiment are articulated based on
-these samples, detailing the outcomes for individual samples or their
-collective as defined by the experimental setup. Sample are not equal a
-individuals, as one individual can provide multiple samples (i,e, right
-and left ventricle). — Run: Denotes the actual outcomes or results of
+<ul>
+<li><p><strong>Study</strong>: Represents a collection of experiments
+aimed at achieving a common goal, serving as an overarching project that
+encapsulates the purpose and scope of the research conducted. A study
+provides the context and rationale for the experiments.</p></li>
+<li><p><strong>Experiment</strong>: Refers to a specific set of
+laboratory procedures applied to input material, designed to achieve an
+anticipated result. Each experiment is a component of a study,
+contributing to its overall objective. It can also be interpreted as a
+series of experimental protocols or assays conducted to test a
+hypothesis or gather data.</p></li>
+<li><p><strong>Sample</strong>: The focus of an experiment, which can be
+a single sample or multiple samples grouped together. The results of an
+experiment are articulated based on these samples, detailing the
+outcomes for individual samples or their collective group as defined by
+the experimental setup. A sample is not equivalent to an individual, as
+one individual can provide multiple samples (e.g., right and left
+ventricle tissue samples).</p></li>
+<li><p><strong>Run</strong>: Denotes the actual outcomes or results of
 the experiment. These runs encompass the data collected from a sample or
-a group of samples linked to a specific experiment. Or simply the the
-output of the research process. — Submission: A submission encompasses a
-bundle of metadata and data objects, coupled with instructions on how
-the submission should be handled. This package facilitates the organized
-and controlled entry of both experimental data and its corresponding
+a group of samples linked to a specific experiment. Essentially, a run
+is the execution of the sequencing or analytical process that generates
+data.</p></li>
+<li><p><strong>Submission</strong>: A submission encompasses a bundle of
+metadata and data objects, coupled with instructions on how the
+submission should be handled. This package facilitates the organized and
+controlled entry of both experimental data and its corresponding
 metadata into the repository, ensuring that the data can be accurately
-classified, accessed, and utilized.</p>
-<p>Understanding these concepts and the structure of the organization is
-important for providing detailed yet direct metadata on data on the
-various steps involved in generating a data set.</p>
-</section><section id="accessing-the-sra"><h2 class="section-heading">Accessing the SRA<a class="anchor" aria-label="anchor" href="#accessing-the-sra"></a>
+classified, accessed, and utilized.</p></li>
+</ul></section><section id="accessing-the-sra"><h2 class="section-heading">Accessing the SRA<a class="anchor" aria-label="anchor" href="#accessing-the-sra"></a>
 </h2>
 <hr class="half-width">
 <p>The SRA database can be accessed through the <a href="https://www.ncbi.nlm.nih.gov/sra" class="external-link">NCBI website</a>.</p>
@@ -1394,17 +1447,430 @@ material, it is important to note that data access is a key aspect of
 the FAIR principles. This means that with the right metadata, data can
 be reused, generating more follow-up studies and citations.</p>
 <p>Significant to note that not all data on the SRA is public, some data
-is private and only accessible to the submitter. Data can also be
+is private and only accessible to authorized users. Data can also be
 embargoed for a certain period of time. Recently, SRA started to use
 placeholder as a way to keep track of data produced by large cohort and
 require controlled access.</p>
 </section><section id="data-deposition"><h2 class="section-heading">Data deposition<a class="anchor" aria-label="anchor" href="#data-deposition"></a>
 </h2>
 <hr class="half-width">
-<p>There multiple ways to deposit data on the SRA, the most common is
-through the submission portal. This approach is detailed <a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitportal/" class="external-link">here</a>. At
+<p>There are multiple ways to deposit data on the SRA, the most common
+is through the submission portal. This approach is detailed <a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitportal/" class="external-link">here</a>. At
 the CRC, we plan to streamline this process using a programmatic
-approach for data submission, as detailed <a href="https://cloud.crc1550.com/index.php/s/NYkwKpMbHP3GTBn" class="external-link">here</a>.</p>
+approach for data submission, as detailed in this <a href="https://cloud.crc1550.com/index.php/s/NYkwKpMbHP3GTBn" class="external-link">SOP</a>. We
+plan to automatize this process in the future.</p>
+</section><section id="metadata-for-a-transcriptomics-experiment"><h2 class="section-heading">Metadata for a transcriptomics experiment<a class="anchor" aria-label="anchor" href="#metadata-for-a-transcriptomics-experiment"></a>
+</h2>
+<hr class="half-width">
+<p>As you can realize, there are differences between the ISA framework
+and SRA. To enable the unambiguous interpretation and adhere to the FAIR
+framework, we take some pragmatic rules to define and create the
+Investigation, Study, and Assay files. The following table shows the
+required and recommended fields for an RNA-sequencing experiment, and
+can be easily adapted to other types of experiments.</p>
+<div class="section level3">
+<h3 id="investigation-metadata">Investigation metadata<a class="anchor" aria-label="anchor" href="#investigation-metadata"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="13%">
+<col width="5%">
+<col width="41%">
+<col width="40%">
+</colgroup>
+<thead><tr class="header">
+<th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Identifier</td>
+<td>required</td>
+<td>Unique identifier for the investigation</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Title</td>
+<td>required</td>
+<td>Title of the investigation</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Description</td>
+<td>required</td>
+<td>Brief description of the investigation</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Submission Date</td>
+<td>required</td>
+<td>Date the investigation was submitted</td>
+<td>Standardized date format</td>
+</tr>
+<tr class="odd">
+<td>Public Release Date</td>
+<td>required</td>
+<td>Date the investigation was publicly released</td>
+<td>Standardized date format</td>
+</tr>
+<tr class="even">
+<td>Contacts</td>
+<td>required</td>
+<td>List of contacts associated with the investigation</td>
+<td>Names, affiliations, roles, and contact details</td>
+</tr>
+<tr class="odd">
+<td>Study Design Types</td>
+<td>recommended</td>
+<td>Types of study designs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="sample-metadata1">Sample metadata<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<a class="anchor" aria-label="anchor" href="#sample-metadata1"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="8%">
+<col width="4%">
+<col width="33%">
+<col width="53%">
+</colgroup>
+<thead><tr class="header">
+<th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>unique ID</td>
+<td>required</td>
+<td>Identifier for a sample that is at least unique within the
+project</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>sample type</td>
+<td>required</td>
+<td>The type of the collected specimen, e.g., tissue biopsy, blood draw,
+or throat swab</td>
+<td>Ontology field - e.g., OBI or EFO</td>
+</tr>
+<tr class="odd">
+<td>species</td>
+<td>required</td>
+<td>The primary species of the specimen, preferably the taxonomic
+identifier</td>
+<td>Ontology field - NCBITaxonomy</td>
+</tr>
+<tr class="even">
+<td>tissue/organism part</td>
+<td>required</td>
+<td>The tissue from which the sample was taken</td>
+<td>Ontology field - e.g., Uberon</td>
+</tr>
+<tr class="odd">
+<td>disease</td>
+<td>required</td>
+<td>Any diseases that may affect the sample</td>
+<td>This may not necessarily be the same as the host’s disease, e.g.,
+healthy brain tissue might be collected from a host with type II
+diabetes while cirrhotic liver tissue might be collected from an
+otherwise healthy individual. Ontology field - e.g., MONDO or DO</td>
+</tr>
+<tr class="even">
+<td>sex</td>
+<td>required</td>
+<td>The biological/genetic sex of the sample</td>
+<td>Ontology field - e.g., PATO</td>
+</tr>
+<tr class="odd">
+<td>development stage</td>
+<td>required</td>
+<td>The developmental stage of the sample</td>
+<td>Ontology field - e.g., Uberon or Hsadpdv; species dependent</td>
+</tr>
+<tr class="even">
+<td>collection date</td>
+<td>required</td>
+<td>The date on which the sample was collected, in a standardized
+format</td>
+<td>Collection date in combination with other fields such as location
+and disease may be sufficient to de-anonymize a sample</td>
+</tr>
+<tr class="odd">
+<td>external accessions</td>
+<td>recommended</td>
+<td>Accession numbers from any external resources to which the sample
+was submitted</td>
+<td>e.g., Biosamples, Biostudies</td>
+</tr>
+<tr class="even">
+<td>ancestry/ethnicity</td>
+<td>recommended</td>
+<td>Ancestry or ethnic group of the individual from which the sample was
+collected</td>
+<td>Ontology field - e.g., HANCESTRO</td>
+</tr>
+<tr class="odd">
+<td>age</td>
+<td>recommended</td>
+<td>Age of the organism from which the sample was collected</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>age unit</td>
+<td>recommended</td>
+<td>Unit of the value of the age field</td>
+<td>Ontology field - e.g., UO</td>
+</tr>
+<tr class="odd">
+<td>BMI</td>
+<td>recommended</td>
+<td>Body mass index of the individual from which the sample was
+collected</td>
+<td>Only applies to human samples</td>
+</tr>
+<tr class="even">
+<td>treatment category</td>
+<td>recommended</td>
+<td>Treatments that the sample might have undergone after
+collection</td>
+<td>Ontology field - e.g., OBI, NCIt, or OGMS</td>
+</tr>
+<tr class="odd">
+<td>cell type</td>
+<td>recommended</td>
+<td>The cell type(s) known or selected to be present in the sample</td>
+<td>Ontology field - e.g., CL</td>
+</tr>
+<tr class="even">
+<td>growth conditions</td>
+<td>recommended</td>
+<td>Features relating to the growth and/or maintenance of the
+sample</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>genetic variation</td>
+<td>recommended</td>
+<td>Any relevant genetic differences from the specimen or sample to the
+expected genomic information for this species, e.g., abnormal chromosome
+counts, major translocations, or indels</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>sample collection technique</td>
+<td>recommended</td>
+<td>The technique used to collect the specimen, e.g., blood draw or
+surgical resection</td>
+<td>Ontology field - e.g., EFO or OBI</td>
+</tr>
+<tr class="odd">
+<td>phenotype</td>
+<td>recommended</td>
+<td>Any relevant (usually abnormal) phenotypes of the specimen or
+sample</td>
+<td>Ontology field - e.g., HP or MP; species dependent</td>
+</tr>
+<tr class="even">
+<td>cell cycle</td>
+<td>recommended</td>
+<td>The cell cycle phase of the sample (for synchronized growing cells
+or a single-cell sample), if known</td>
+<td>Ontology field - e.g., GO</td>
+</tr>
+<tr class="odd">
+<td>cell location</td>
+<td>recommended</td>
+<td>The cell location from which genetic material was collected (usually
+either nucleus or mitochondria)</td>
+<td>Ontology field - e.g., GO</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="assay-metadata">Assay metadata<a class="anchor" aria-label="anchor" href="#assay-metadata"></a>
+</h3>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="13%">
+<col width="4%">
+<col width="41%">
+<col width="40%">
+</colgroup>
+<thead><tr class="header">
+<th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Identifier</td>
+<td>required</td>
+<td>Unique identifier for the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>File Name</td>
+<td>required</td>
+<td>Name of the file that contains the assay data</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Measurement Type</td>
+<td>required</td>
+<td>Type of measurement performed in the assay</td>
+<td>Ontology field - e.g. OBI</td>
+</tr>
+<tr class="even">
+<td>Technology Type</td>
+<td>required</td>
+<td>Type of technology used in the assay</td>
+<td>Ontology field - e.g. OBI</td>
+</tr>
+<tr class="odd">
+<td>Technology Platform</td>
+<td>recommended</td>
+<td>Specific platform or instrument used in the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Performer</td>
+<td>required</td>
+<td>Person or organization that performed the assay</td>
+<td>Names, affiliations, roles, and contact details</td>
+</tr>
+<tr class="odd">
+<td>Date</td>
+<td>recommended</td>
+<td>Date the assay was performed</td>
+<td>Standardized date format</td>
+</tr>
+<tr class="even">
+<td>Parameter Values</td>
+<td>recommended</td>
+<td>Parameters and their values used in the assay</td>
+<td>Names, types, descriptions, and values</td>
+</tr>
+<tr class="odd">
+<td>Sample Name</td>
+<td>required</td>
+<td>Name of the sample used in the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Raw Data File</td>
+<td>recommended</td>
+<td>File name of the raw data generated by the assay</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Processed Data File</td>
+<td>recommended</td>
+<td>File name of the processed data generated by the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data Transformation Protocol</td>
+<td>recommended</td>
+<td>Protocol used for data transformation</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr>
+<tr class="odd">
+<td>Normalization Protocol</td>
+<td>recommended</td>
+<td>Protocol used for data normalization</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr>
+<tr class="even">
+<td>Quality Control Protocol</td>
+<td>recommended</td>
+<td>Protocol used for quality control</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr>
+<tr class="odd">
+<td>Data File</td>
+<td>required</td>
+<td>File name of the data file generated by the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data Format</td>
+<td>required</td>
+<td>Format of the data file generated by the assay</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Data URI</td>
+<td>recommended</td>
+<td>URI of the data file generated by the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Protocol Parameters</td>
+<td>recommended</td>
+<td>Parameters used in each protocol</td>
+<td>Names, types, descriptions, and values</td>
+</tr>
+<tr class="odd">
+<td>Protocol Components</td>
+<td>recommended</td>
+<td>Components used in each protocol</td>
+<td>Component names, types, descriptions, and URIs</td>
+</tr>
+<tr class="even">
+<td>Protocol Performance Comments</td>
+<td>optional</td>
+<td>Comments on the performance of each protocol</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Data Types</td>
+<td>recommended</td>
+<td>Types of data generated from the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data Description</td>
+<td>optional</td>
+<td>Description of the data generated from the assay</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Experimental Design Type</td>
+<td>recommended</td>
+<td>Type of experimental design used in the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Experimental Design Description</td>
+<td>optional</td>
+<td>Description of the experimental design used in the assay</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Replication</td>
+<td>optional</td>
+<td>Information about the replication of the assay</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Factor Values</td>
+<td>recommended</td>
+<td>Experimental factors and their values specific to the assay</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1436,7 +1902,14 @@ accommodate the needs of diverse research projects and goals.</p></li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section>
+</div>
+</section><div class="footnotes footnotes-end-of-document">
+<hr>
+<ol>
+<li id="fn1"><p>Based on <a href="https://faircookbook.elixir-europe.org/content/recipes/interoperability/transcriptomics-metadata.html#suggested-metadata-fields" class="external-link">The
+faircookbook</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div></section>
 </div>
     </main>
 </div>
@@ -1484,8 +1957,8 @@ any links that you are not going to use.
   "url": "https://tbrittoborges.github.io/omics_metadata/instructor/aio.html",
   "identifier": "https://tbrittoborges.github.io/omics_metadata/instructor/aio.html",
   "dateCreated": "2024-02-14",
-  "dateModified": "2024-05-14",
-  "datePublished": "2024-05-14"
+  "dateModified": "2024-05-17",
+  "datePublished": "2024-05-17"
 }
 
   </script><script>

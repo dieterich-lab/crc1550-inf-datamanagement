@@ -92,11 +92,11 @@
   CRC1550 data management training material
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 50%" class="percentage">
-    50%
+<aside class="col-md-12 lesson-progress"><div style="width: 62%" class="percentage">
+    62%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 50%" aria-valuenow="50" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 62%" aria-valuenow="62" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -162,7 +162,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="bionfo_primer.html">2. Primer in Bioinformatics</a>
+        <a href="bionfo_primer.html">2. An introduction to bioinformatics file formats.</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -171,7 +171,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="fair-principles.html">3. fair_principles</a>
+        <a href="fair-principles.html">3. FAIR Principles in OMICs Research</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -186,22 +186,13 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush6">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="data_management_plan.html">5. Data Management Plan</a>
-    </div><!--/div.accordion-header-->
-        
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        6. SRA
+        5. SRA
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -212,6 +203,7 @@
 <li><a href="#sra-concepts">SRA concepts:</a></li>
 <li><a href="#accessing-the-sra">Accessing the SRA</a></li>
 <li><a href="#data-deposition">Data deposition</a></li>
+<li><a href="#metadata-for-a-transcriptomics-experiment">Metadata for a transcriptomics experiment</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -260,14 +252,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/data_management_plan.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/sodar.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/data_management_plan.html" rel="prev">
+        <a class="chapter-link" href="../instructor/sodar.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Data Management
+          Previous: SODAR: System for
         </a>
         <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
           Home
@@ -276,7 +268,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>SRA</h1>
-        <p>Last updated on 2024-05-14 |
+        <p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/tbrittoborges/omics_metadata/edit/main/episodes/sra.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -306,7 +298,9 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Get to know the SRA database</li>
-<li>Understand the requiriments for data deposition</li>
+<li>Understand the requirements for data deposition</li>
+<li>Learn required optional field used for a RNA-sequencing
+experiment</li>
 </ul></div>
 </div>
 </div>
@@ -314,18 +308,21 @@
 </div>
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<hr class="half-width"><p>The Sequence Read Archive is a public repository that contains
+<hr class="half-width"><p>The Sequence Read Archive (SRA) is a public repository that contains
 high-throughput sequencing data. It is a part of the International
 Nucleotide Sequence Database Collaboration (INSDC), which includes
-several institutes. Data from all life forms is included in the
-repository, as well as metagenomics and ecological studies. SRA stores
-raw sequencing data and alignment. We use the SRA to deposit, which is
-usually mandatory as part of a paper publication.</p>
-<p>It aims to establish a central repository for next-generation
+several major institutes: the National Center for Biotechnology
+Information (NCBI) in the USA, the European Bioinformatics Institute
+(EBI) in Europe, and the DNA Data Bank of Japan (DDBJ) in Japan. The SRA
+includes data from all life forms, as well as metagenomics and
+ecological studies. The SRA stores raw sequencing data and sometimes the
+processed alignment data. Researchers often use the SRA to deposit their
+data, which is typically a requirement for the publication of research
+papers. It aims to establish a central repository for next-generation
 sequencing data, linking to resources that reference or utilize this
 data. The repository allows in tracking project metadata for studies and
 experiments. There’s a focus on facilitating flexible submission and
-retrieval of ancillary data providing normalized data structures.
+retrieval of ancillary data, providing normalized data structures.
 Additionally, the objectives include decoupling the submission process
 from content and laying the groundwork for interactive user submissions
 and data retrieval.</p>
@@ -333,31 +330,35 @@ and data retrieval.</p>
 </h2>
 <hr class="half-width"><p>SRA metadata concept separates experimental data from its metadata,
 organizing the latter into a structured hierarchy:</p>
-<p>— Study: Represents a collection of experiments aimed towards a
-common goal, serving as an overarching project that encapsulates the
-purpose and scope of the research conducted. — Experiment: Refers to a
-specific set of laboratory procedures applied to input material,
-designed to achieve an anticipated result. Each experiment is a
-component of a study, contributing to its overall objective. Can also be
-interpreted as a series of experimental protocols. — Sample: The focus
-of an experiment, which can be a single sample or multiple samples
-grouped together. The results of an experiment are articulated based on
-these samples, detailing the outcomes for individual samples or their
-collective as defined by the experimental setup. Sample are not equal a
-individuals, as one individual can provide multiple samples (i,e, right
-and left ventricle). — Run: Denotes the actual outcomes or results of
+<ul><li><p><strong>Study</strong>: Represents a collection of experiments
+aimed at achieving a common goal, serving as an overarching project that
+encapsulates the purpose and scope of the research conducted. A study
+provides the context and rationale for the experiments.</p></li>
+<li><p><strong>Experiment</strong>: Refers to a specific set of
+laboratory procedures applied to input material, designed to achieve an
+anticipated result. Each experiment is a component of a study,
+contributing to its overall objective. It can also be interpreted as a
+series of experimental protocols or assays conducted to test a
+hypothesis or gather data.</p></li>
+<li><p><strong>Sample</strong>: The focus of an experiment, which can be
+a single sample or multiple samples grouped together. The results of an
+experiment are articulated based on these samples, detailing the
+outcomes for individual samples or their collective group as defined by
+the experimental setup. A sample is not equivalent to an individual, as
+one individual can provide multiple samples (e.g., right and left
+ventricle tissue samples).</p></li>
+<li><p><strong>Run</strong>: Denotes the actual outcomes or results of
 the experiment. These runs encompass the data collected from a sample or
-a group of samples linked to a specific experiment. Or simply the the
-output of the research process. — Submission: A submission encompasses a
-bundle of metadata and data objects, coupled with instructions on how
-the submission should be handled. This package facilitates the organized
-and controlled entry of both experimental data and its corresponding
+a group of samples linked to a specific experiment. Essentially, a run
+is the execution of the sequencing or analytical process that generates
+data.</p></li>
+<li><p><strong>Submission</strong>: A submission encompasses a bundle of
+metadata and data objects, coupled with instructions on how the
+submission should be handled. This package facilitates the organized and
+controlled entry of both experimental data and its corresponding
 metadata into the repository, ensuring that the data can be accurately
-classified, accessed, and utilized.</p>
-<p>Understanding these concepts and the structure of the organization is
-important for providing detailed yet direct metadata on data on the
-various steps involved in generating a data set.</p>
-</section><section id="accessing-the-sra"><h2 class="section-heading">Accessing the SRA<a class="anchor" aria-label="anchor" href="#accessing-the-sra"></a>
+classified, accessed, and utilized.</p></li>
+</ul></section><section id="accessing-the-sra"><h2 class="section-heading">Accessing the SRA<a class="anchor" aria-label="anchor" href="#accessing-the-sra"></a>
 </h2>
 <hr class="half-width"><p>The SRA database can be accessed through the <a href="https://www.ncbi.nlm.nih.gov/sra" class="external-link">NCBI website</a>.</p>
 <p>Although discussing data access is outside the scope of this
@@ -365,17 +366,282 @@ material, it is important to note that data access is a key aspect of
 the FAIR principles. This means that with the right metadata, data can
 be reused, generating more follow-up studies and citations.</p>
 <p>Significant to note that not all data on the SRA is public, some data
-is private and only accessible to the submitter. Data can also be
+is private and only accessible to authorized users. Data can also be
 embargoed for a certain period of time. Recently, SRA started to use
 placeholder as a way to keep track of data produced by large cohort and
 require controlled access.</p>
 </section><section id="data-deposition"><h2 class="section-heading">Data deposition<a class="anchor" aria-label="anchor" href="#data-deposition"></a>
 </h2>
-<hr class="half-width"><p>There multiple ways to deposit data on the SRA, the most common is
-through the submission portal. This approach is detailed <a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitportal/" class="external-link">here</a>. At
+<hr class="half-width"><p>There are multiple ways to deposit data on the SRA, the most common
+is through the submission portal. This approach is detailed <a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitportal/" class="external-link">here</a>. At
 the CRC, we plan to streamline this process using a programmatic
-approach for data submission, as detailed <a href="https://cloud.crc1550.com/index.php/s/NYkwKpMbHP3GTBn" class="external-link">here</a>.</p>
-<div id="keypoints1" class="callout keypoints">
+approach for data submission, as detailed in this <a href="https://cloud.crc1550.com/index.php/s/NYkwKpMbHP3GTBn" class="external-link">SOP</a>. We
+plan to automatize this process in the future.</p>
+</section><section id="metadata-for-a-transcriptomics-experiment"><h2 class="section-heading">Metadata for a transcriptomics experiment<a class="anchor" aria-label="anchor" href="#metadata-for-a-transcriptomics-experiment"></a>
+</h2>
+<hr class="half-width"><p>As you can realize, there are differences between the ISA framework
+and SRA. To enable the unambiguous interpretation and adhere to the FAIR
+framework, we take some pragmatic rules to define and create the
+Investigation, Study, and Assay files. The following table shows the
+required and recommended fields for an RNA-sequencing experiment, and
+can be easily adapted to other types of experiments.</p>
+<div class="section level3">
+<h3 id="investigation-metadata">Investigation metadata<a class="anchor" aria-label="anchor" href="#investigation-metadata"></a></h3>
+<table class="table"><colgroup><col width="13%"><col width="5%"><col width="41%"><col width="40%"></colgroup><thead><tr class="header"><th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead><tbody><tr class="odd"><td>Identifier</td>
+<td>required</td>
+<td>Unique identifier for the investigation</td>
+<td></td>
+</tr><tr class="even"><td>Title</td>
+<td>required</td>
+<td>Title of the investigation</td>
+<td></td>
+</tr><tr class="odd"><td>Description</td>
+<td>required</td>
+<td>Brief description of the investigation</td>
+<td></td>
+</tr><tr class="even"><td>Submission Date</td>
+<td>required</td>
+<td>Date the investigation was submitted</td>
+<td>Standardized date format</td>
+</tr><tr class="odd"><td>Public Release Date</td>
+<td>required</td>
+<td>Date the investigation was publicly released</td>
+<td>Standardized date format</td>
+</tr><tr class="even"><td>Contacts</td>
+<td>required</td>
+<td>List of contacts associated with the investigation</td>
+<td>Names, affiliations, roles, and contact details</td>
+</tr><tr class="odd"><td>Study Design Types</td>
+<td>recommended</td>
+<td>Types of study designs</td>
+<td></td>
+</tr></tbody></table></div>
+<div class="section level3">
+<h3 id="sample-metadata1">Sample metadata<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<a class="anchor" aria-label="anchor" href="#sample-metadata1"></a></h3>
+<table class="table"><colgroup><col width="8%"><col width="4%"><col width="33%"><col width="53%"></colgroup><thead><tr class="header"><th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead><tbody><tr class="odd"><td>unique ID</td>
+<td>required</td>
+<td>Identifier for a sample that is at least unique within the
+project</td>
+<td></td>
+</tr><tr class="even"><td>sample type</td>
+<td>required</td>
+<td>The type of the collected specimen, e.g., tissue biopsy, blood draw,
+or throat swab</td>
+<td>Ontology field - e.g., OBI or EFO</td>
+</tr><tr class="odd"><td>species</td>
+<td>required</td>
+<td>The primary species of the specimen, preferably the taxonomic
+identifier</td>
+<td>Ontology field - NCBITaxonomy</td>
+</tr><tr class="even"><td>tissue/organism part</td>
+<td>required</td>
+<td>The tissue from which the sample was taken</td>
+<td>Ontology field - e.g., Uberon</td>
+</tr><tr class="odd"><td>disease</td>
+<td>required</td>
+<td>Any diseases that may affect the sample</td>
+<td>This may not necessarily be the same as the host’s disease, e.g.,
+healthy brain tissue might be collected from a host with type II
+diabetes while cirrhotic liver tissue might be collected from an
+otherwise healthy individual. Ontology field - e.g., MONDO or DO</td>
+</tr><tr class="even"><td>sex</td>
+<td>required</td>
+<td>The biological/genetic sex of the sample</td>
+<td>Ontology field - e.g., PATO</td>
+</tr><tr class="odd"><td>development stage</td>
+<td>required</td>
+<td>The developmental stage of the sample</td>
+<td>Ontology field - e.g., Uberon or Hsadpdv; species dependent</td>
+</tr><tr class="even"><td>collection date</td>
+<td>required</td>
+<td>The date on which the sample was collected, in a standardized
+format</td>
+<td>Collection date in combination with other fields such as location
+and disease may be sufficient to de-anonymize a sample</td>
+</tr><tr class="odd"><td>external accessions</td>
+<td>recommended</td>
+<td>Accession numbers from any external resources to which the sample
+was submitted</td>
+<td>e.g., Biosamples, Biostudies</td>
+</tr><tr class="even"><td>ancestry/ethnicity</td>
+<td>recommended</td>
+<td>Ancestry or ethnic group of the individual from which the sample was
+collected</td>
+<td>Ontology field - e.g., HANCESTRO</td>
+</tr><tr class="odd"><td>age</td>
+<td>recommended</td>
+<td>Age of the organism from which the sample was collected</td>
+<td></td>
+</tr><tr class="even"><td>age unit</td>
+<td>recommended</td>
+<td>Unit of the value of the age field</td>
+<td>Ontology field - e.g., UO</td>
+</tr><tr class="odd"><td>BMI</td>
+<td>recommended</td>
+<td>Body mass index of the individual from which the sample was
+collected</td>
+<td>Only applies to human samples</td>
+</tr><tr class="even"><td>treatment category</td>
+<td>recommended</td>
+<td>Treatments that the sample might have undergone after
+collection</td>
+<td>Ontology field - e.g., OBI, NCIt, or OGMS</td>
+</tr><tr class="odd"><td>cell type</td>
+<td>recommended</td>
+<td>The cell type(s) known or selected to be present in the sample</td>
+<td>Ontology field - e.g., CL</td>
+</tr><tr class="even"><td>growth conditions</td>
+<td>recommended</td>
+<td>Features relating to the growth and/or maintenance of the
+sample</td>
+<td></td>
+</tr><tr class="odd"><td>genetic variation</td>
+<td>recommended</td>
+<td>Any relevant genetic differences from the specimen or sample to the
+expected genomic information for this species, e.g., abnormal chromosome
+counts, major translocations, or indels</td>
+<td></td>
+</tr><tr class="even"><td>sample collection technique</td>
+<td>recommended</td>
+<td>The technique used to collect the specimen, e.g., blood draw or
+surgical resection</td>
+<td>Ontology field - e.g., EFO or OBI</td>
+</tr><tr class="odd"><td>phenotype</td>
+<td>recommended</td>
+<td>Any relevant (usually abnormal) phenotypes of the specimen or
+sample</td>
+<td>Ontology field - e.g., HP or MP; species dependent</td>
+</tr><tr class="even"><td>cell cycle</td>
+<td>recommended</td>
+<td>The cell cycle phase of the sample (for synchronized growing cells
+or a single-cell sample), if known</td>
+<td>Ontology field - e.g., GO</td>
+</tr><tr class="odd"><td>cell location</td>
+<td>recommended</td>
+<td>The cell location from which genetic material was collected (usually
+either nucleus or mitochondria)</td>
+<td>Ontology field - e.g., GO</td>
+</tr></tbody></table></div>
+<div class="section level3">
+<h3 id="assay-metadata">Assay metadata<a class="anchor" aria-label="anchor" href="#assay-metadata"></a></h3>
+<table style="width:100%;" class="table"><colgroup><col width="13%"><col width="4%"><col width="41%"><col width="40%"></colgroup><thead><tr class="header"><th>Metadata Field</th>
+<th>Required?</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead><tbody><tr class="odd"><td>Identifier</td>
+<td>required</td>
+<td>Unique identifier for the assay</td>
+<td></td>
+</tr><tr class="even"><td>File Name</td>
+<td>required</td>
+<td>Name of the file that contains the assay data</td>
+<td></td>
+</tr><tr class="odd"><td>Measurement Type</td>
+<td>required</td>
+<td>Type of measurement performed in the assay</td>
+<td>Ontology field - e.g. OBI</td>
+</tr><tr class="even"><td>Technology Type</td>
+<td>required</td>
+<td>Type of technology used in the assay</td>
+<td>Ontology field - e.g. OBI</td>
+</tr><tr class="odd"><td>Technology Platform</td>
+<td>recommended</td>
+<td>Specific platform or instrument used in the assay</td>
+<td></td>
+</tr><tr class="even"><td>Performer</td>
+<td>required</td>
+<td>Person or organization that performed the assay</td>
+<td>Names, affiliations, roles, and contact details</td>
+</tr><tr class="odd"><td>Date</td>
+<td>recommended</td>
+<td>Date the assay was performed</td>
+<td>Standardized date format</td>
+</tr><tr class="even"><td>Parameter Values</td>
+<td>recommended</td>
+<td>Parameters and their values used in the assay</td>
+<td>Names, types, descriptions, and values</td>
+</tr><tr class="odd"><td>Sample Name</td>
+<td>required</td>
+<td>Name of the sample used in the assay</td>
+<td></td>
+</tr><tr class="even"><td>Raw Data File</td>
+<td>recommended</td>
+<td>File name of the raw data generated by the assay</td>
+<td></td>
+</tr><tr class="odd"><td>Processed Data File</td>
+<td>recommended</td>
+<td>File name of the processed data generated by the assay</td>
+<td></td>
+</tr><tr class="even"><td>Data Transformation Protocol</td>
+<td>recommended</td>
+<td>Protocol used for data transformation</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr><tr class="odd"><td>Normalization Protocol</td>
+<td>recommended</td>
+<td>Protocol used for data normalization</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr><tr class="even"><td>Quality Control Protocol</td>
+<td>recommended</td>
+<td>Protocol used for quality control</td>
+<td>Protocol names, descriptions, URIs, and versions</td>
+</tr><tr class="odd"><td>Data File</td>
+<td>required</td>
+<td>File name of the data file generated by the assay</td>
+<td></td>
+</tr><tr class="even"><td>Data Format</td>
+<td>required</td>
+<td>Format of the data file generated by the assay</td>
+<td></td>
+</tr><tr class="odd"><td>Data URI</td>
+<td>recommended</td>
+<td>URI of the data file generated by the assay</td>
+<td></td>
+</tr><tr class="even"><td>Protocol Parameters</td>
+<td>recommended</td>
+<td>Parameters used in each protocol</td>
+<td>Names, types, descriptions, and values</td>
+</tr><tr class="odd"><td>Protocol Components</td>
+<td>recommended</td>
+<td>Components used in each protocol</td>
+<td>Component names, types, descriptions, and URIs</td>
+</tr><tr class="even"><td>Protocol Performance Comments</td>
+<td>optional</td>
+<td>Comments on the performance of each protocol</td>
+<td></td>
+</tr><tr class="odd"><td>Data Types</td>
+<td>recommended</td>
+<td>Types of data generated from the assay</td>
+<td></td>
+</tr><tr class="even"><td>Data Description</td>
+<td>optional</td>
+<td>Description of the data generated from the assay</td>
+<td></td>
+</tr><tr class="odd"><td>Experimental Design Type</td>
+<td>recommended</td>
+<td>Type of experimental design used in the assay</td>
+<td></td>
+</tr><tr class="even"><td>Experimental Design Description</td>
+<td>optional</td>
+<td>Description of the experimental design used in the assay</td>
+<td></td>
+</tr><tr class="odd"><td>Replication</td>
+<td>optional</td>
+<td>Information about the replication of the assay</td>
+<td></td>
+</tr><tr class="even"><td>Factor Values</td>
+<td>recommended</td>
+<td>Experimental factors and their values specific to the assay</td>
+<td></td>
+</tr></tbody></table><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -404,16 +670,24 @@ accommodate the needs of diverse research projects and goals.</p></li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></div> <!-- / div.lesson-content -->
+</div>
+</section><div class="footnotes footnotes-end-of-document">
+<hr><ol><li id="fn1"><p>Based on <a href="https://faircookbook.elixir-europe.org/content/recipes/interoperability/transcriptomics-metadata.html#suggested-metadata-fields" class="external-link">The
+faircookbook</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol></div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/data_management_plan.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/sodar.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/data_management_plan.html" rel="prev">
+        <a class="chapter-link" href="../instructor/sodar.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Data Management
+          Previous: SODAR: System for
         </a>
         <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
           Home
@@ -462,8 +736,8 @@ any links that you are not going to use.
   "url": "https://tbrittoborges.github.io/omics_metadata/instructor/sra.html",
   "identifier": "https://tbrittoborges.github.io/omics_metadata/instructor/sra.html",
   "dateCreated": "2024-02-14",
-  "dateModified": "2024-05-14",
-  "datePublished": "2024-05-14"
+  "dateModified": "2024-05-17",
+  "datePublished": "2024-05-17"
 }
 
   </script><script>
