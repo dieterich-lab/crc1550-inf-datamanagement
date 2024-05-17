@@ -40,7 +40,7 @@ Within the CRC1550, the data management plan currently focuses on animal experim
 
 There are a multitude of file formats used in bioinformatics, each with its specific use case. Some of the most commonly used file formats include:
 
-**FASTQ format**: is sequence data formats, a text-based format for storing both an oligonucleotide sequence and its corresponding quality scores. Obtained after base calling procedure.
+**FASTQ format**: a text-based format for storing both oligonucleotide sequences and its corresponding quality scores. Obtained after base calling procedure.
 
 ::: callout
 #### FASTQ file format
@@ -58,6 +58,8 @@ For bioinformatics workflow, the FASTQ format is often the initial step. This fi
 -   mzIdentML: A standardized format for reporting peptide and protein identifications, including search results and confidence metrics.
 -   mzTab: A simpler, tab-delimited format for reporting identifications, quantification results, and metadata, designed for ease of use and flexibility.
 -   mzML: An XML-based open standard for storing raw mass spectrometry data, encompassing detailed spectral information and metadata.
+
+### Types of file formats 
 
 **Proprietary formats:** high-throughput machine such as Illumina, Nanopore, produce files before base calling. These files are in the form of binary files, and are not human-readable and depend on vendor-specific methods for signal processing.
 
