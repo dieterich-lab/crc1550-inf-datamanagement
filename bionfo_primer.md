@@ -1,5 +1,5 @@
 ---
-title: ' Primer in Bioinformatics'
+title: 'An introduction to bioinformatics file formats.'
 teaching: 0
 exercises: 0
 output: pdf_document
@@ -7,17 +7,26 @@ output: pdf_document
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- None.
+- What are the different files formats used in bioinformatics?
+- Differences between raw and processed data sets.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::: objectives
--  Introduce the idea of OMICs and explain why they are important in bioinformatics.
--  Familiarize with commonly used file formats
+-  Introduce the idea of OMICs experiments.
+-  Familiarize with commonly used file formats and concepts.
 -  Understanding the multilayered nature of metadata from OMICs experiments.
 :::
+##  Introduction
 
-**Introduction**: OMICs technologies provide unbiased measurements of molecular entities in biological samples. These measurements allow for a comprehensive exploration of functions and association of such entities. The extensive utilization of OMICs techniques resulted in the establishment of system biology, a branch of biology that aims to comprehend biological systems in their entirety.
+OMICs technologies provide unbiased measurements of molecular entities in biological samples. These measurements allow for a comprehensive exploration of functions and association of such entities. System biology is a branch of biology that aims to comprehend biological systems in their entirety by the application of OMICs methods.
+
+::: callout
+
+#### CRC1550 focus
+
+Within the CRC1550, the data management plan currently focuses on animal experiments, and the data generated from specific OMICs experiments.   The data management plan is a living document that will be updated as the project progresses. Currently, we don't consider data human data from patient samples, such as clinical data, or imaging data, which are current out of the scope of this material.
+:::
 
 **OMICs** is a collective term for a group of technologies that allow for the comprehensive analysis of biological molecules. These technologies include genomics, transcriptomics, proteomics, metabolomics, and lipidomics. Each of these technologies provides a unique perspective on the molecular composition of a biological sample, and together they allow for a comprehensive exploration of the functions and associations of biological molecules.
 
@@ -31,36 +40,59 @@ output: pdf_document
 
 ## File formats
 
-There are a multitude of file formats used in bioinformatics, each with its own specific use case. Some of the most commonly used file formats include:
+There are a multitude of file formats used in bioinformatics, each with its specific use case. Some of the most commonly used file formats include:
 
-**FASTQ format** is a text-based format for storing both an oligonucleotide sequence and its corresponding quality scores. Obtained after base calling.
+**FASTQ format**: is sequence data formats, a text-based format for storing both an oligonucleotide sequence and its corresponding quality scores. Obtained after base calling procedure.
+
+::: callout
+
+#### FASTQ file format
+
+For bioinformatics workflow, the FASTQ format is often the initial step. This file format stores “reads”, or  nucleotide sequences, along with their quality scores. Each sequence in a FASTQ file is represented by four lines: a header with a '\@' symbol followed by an identifier and optional description, the nucleotide sequence itself, a separator line starting with a '+', and the quality scores encoded as ASCII characters. This structure allows for efficient storage and analysis of sequencing data, essential for tasks like genome assembly and analysis. For more detailed information, please visit the Wikipedia page on [FASTQ format](https://en.wikipedia.org/wiki/FASTQ_format).
+:::
+
+**VCF/BCF**: Stores genetic variation data, such as single nucleotide polymorphisms (SNPs) and insertions/deletions (indels).
 
 **SAM/BAM/CRAM files**: These are used to store sequence alignment data, and are used to represent the alignment of reads to a reference genome. SAM is a text-based format, while BAM is a binary version of the same format. CRAM is a compressed version of the BAM format.
 
-**PRIDE XML, mzIdentML, mzTab, and mzML**: These file formats are used to store, process, and visualize mass spectrometry-based proteomics data deposited in the PRIDE Archive. PRIDE XML is the internal data format and submission format of PRIDE, while mzIdentML and mzTab are standard file formats for reporting peptide/protein identification and quantification results. Additionally, mzML is used to store the raw output files from mass spectrometers. Note that there are many different file formats for raw proteomics datasets, depending on the equipment vendor.
+**PRIDE XML, mzIdentML, mzTab, and mzML**: These file formats are used to store, process, and visualize mass spectrometry-based proteomics data deposited in the PRIDE Archive.
 
-**Raw sequencing formats:** high-throughput machine such as Illumina, Nanopore, produce files before base calling. These files are in the form of binary files, and are not human-readable and depend on vendor-specific methods for signal processing.
+-  PRIDE XML: The internal data format and submission format for the PRIDE database, capturing comprehensive metadata and experimental details.
+-  mzIdentML: A standardized format for reporting peptide and protein identifications, including search results and confidence metrics.
+-  mzTab: A simpler, tab-delimited format for reporting identifications, quantification results, and metadata, designed for ease of use and flexibility.
+-  mzML: An XML-based open standard for storing raw mass spectrometry data, encompassing detailed spectral information and metadata.
 
-::: hint
-For bioinformatics workflow, the FASTQ format is often the initial step. This file format stores "reads", or  nucleotide sequences, along with their quality scores. Each sequence in a FASTQ file is represented by four lines: a header with a '\@' symbol followed by an identifier and optional description, the nucleotide sequence itself, a separator line starting with a '+', and the quality scores encoded as ASCII characters. This structure allows for efficient storage and analysis of sequencing data, essential for tasks like genome assembly and analysis. For more detailed information, please visit the Wikipedia page on [FASTQ format](https://en.wikipedia.org/wiki/FASTQ_format).
+**Proprietary formats:** high-throughput machine such as Illumina, Nanopore, produce files before base calling. These files are in the form of binary files, and are not human-readable and depend on vendor-specific methods for signal processing.
+
+Note that various proprietary formats are used for raw proteomics data depending on the equipment vendor.
+
+**Processed file formats:** formats whom data has been processed and are ready for downstream analysis. These formats are often tabular, and can be easily imported into R or Python for further analysis. Examples include:
+- **Tabular formats**: csv, xlsx, tsv, and others.
+- **RData**: R-specific binary format for storing R objects.
+- **HDF5**: A data model, library, and file format for storing and managing large and complex data.
+- **BED, GFF, and GTF**: These are used to store genomic feature or annotations, such as gene locations, and structure.
+
+The scope of this lesson is to give an overview of file formats used in bioinformatics. It is important to understand that the different files a specific purpose, can be vendor-specific and that the choice of file format can have a significant impact on the downstream analysis of the data. For example, use of legacy vendor-specific format can limit the use of the data in modern bioinformatics pipelines, as proprietary programs may disappear. In general, it's good practice to use open-source file formats.
+
+::: callout
+
+#### Raw vs processed data
+As a general rule of thumb, one can consider the raw data as the data that comes directly from the sequencing machine, and the processed data any data set derived from the raw data. The raw data is often in a format that is not human-readable, and requires specialized software to process. This definition may change depending on context.
 :::
-
-It is out of the scope of this lesson to detail all file formats used in bioinformatics, but it is important to understand that the different files a specific purpose, can be vendor-specific and that the choice of file format can have a significant impact on the downstream analysis of the data. For example, use of legacy vendor-specific format can limit the use of the data in modern bioinformatics pipelines, as proprietary programs may disappear. In general, it's good practice to use open-source file formats.
 
 ## Challenges in OMICs data:
 
-There are many challenges involved in the use of OMICs datasets. 
+There are many challenges involved in the use of OMICs datasets.
 
--   **Data storage**: OMICs datasets can be large, and require robust data storage and backup solutions. This is especially true for raw sequencing data, which can be many gigabytes in size. We expect the size of OMICs datasets to predict by the CRC to be in the order of 20 terabytes per year.
-- **Data analysis**: OMICs datasets are complex, and require specialized methods for analysis. 
-- **Standardization**: As there are many different file formats, there are many data standards and protocols used in OMICs research. This lack of standardization make it difficult to compare data between different labs.
-- **Ethical considerations**: Handling of personal OMICs data requires careful consideration of ethical and legal issues, such as patient privacy and data sharing. 
-- **Data sharing**: OMICs datasets are required to be shared upon publication. 
+- **Data storage**: OMICs datasets can be large, and require robust data storage and backup solutions. This is especially true for raw sequencing data, which can be many gigabytes in size. We expect the size of OMICs datasets to predict by the CRC to be in the order of 20 terabytes per year.
+- **Data analysis**: OMICs datasets are complex, and require specialized methods for analysis.
+- **Standardization**: As there are many file formats, there are many data standards and protocols used in OMICs research. This lack of standardization make it difficult to compare data between different centres.
+- **Data sharing**: OMICs datasets are required to be shared upon publication.
 
-All the challenges can be mitigated through metadata use. Metadata is data that provides information about other data, or in other words, a detailed description of the data's attribute. For example, for the data sharing challenge mentioned above, metadata can be used to find and filter datasets. This use-case is also interesting from the method development standpoint, as new methods can be used to analyze old data, but only if the data was properly described in terms of provenance and metadata. Metadata is essential for understanding the context of the data, and is used to help find and interpret the data. In the context of OMICs data, metadata can include information about the sample donor, sample, the experimental conditions, the data collection methods, protocols  and the data analysis methods. Metadata is essential for reproducibility, as it allows others to understand and replicate the results of an experiment.
+All the challenges can be mitigated through the use of the meta data managing plan. Metadata is essential for understanding the context of the data, and is used to help find and interpret the data. In the context of OMICs data, metadata can include information about the sample donor, sample, the experimental conditions, the data collection methods, protocols  and the data analysis methods. Results files can also contain metadata describing the processing steps used on the raw files. Metadata is essential for reproducibility, as it allows others to understand and replicate the results of experiments.
 
 :::::: keypoints
- - OMICs technologies are crucial for a holistic understanding of biological systems.
- - Common file formats in bioinformatics serve specific purposes, facilitating data analysis and sharing.
- - Metadata plays a critical role in contextualizing and modeling OMICs data.
+- **OMICs technologies** are crucial for a holistic understanding of biological systems.
+- Common file formats in bioinformatics serve specific purposes, facilitating data analysis and sharing.
+- Metadata plays a critical role in contextualizing and modeling OMICs data.
 ::::::

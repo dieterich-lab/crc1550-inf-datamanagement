@@ -1,122 +1,109 @@
 ---
-title: 'fair_principles'
-teaching: 10
-exercises: 2
+title: 'FAIR Principles in OMICs Research'
+teaching: 20
+exercises: 0
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+::: questions
+-   What are action can we take for to make our data FAIR?
+:::
 
-- None
+::: objectives
+-   Action Learn actionable Explain how metadata standardization plays a pivotal role in making data FAIR
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+# Reminder of FAIR framework
 
-::::::::::::::::::::::::::::::::::::: objectives
+This chapter aims to give a deep dive on FAIR framework and what solution our infrastructure team can provide using CardioCloud and SODAR.
 
-- Explain how metadata plays a pivotal role in making data FAIR
+-   **Findable**: Metadata helps in uniquely identifying data for easy discovery.
+-   **Accessible**: Metadata includes information on how data can be accessed.
+-   **Interoperable**: Standardized metadata ensures that data can be integrated with other datasets.
+-   **Reusable**: Metadata provides the information necessary for data to be reused effectively, including the conditions under which it can be reused.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+## Findable
+
+The “Findable” aspect of the FAIR principles emphasizes the need for data to be easily located and identified. This is the first step in ensuring that data can be used and reused effectively. Metadata plays a crucial role in making data findable by providing information about the data, such as its title, publication, author, and description. This information helps users to locate and identify the data they need for their research. Or describing sample location (left-ventricle vs. right ventricle), library preparation type (Poly-A enrichment vs. Ribo depletion).
+
+Another important aspect for findability is the use of persistent identifier. One every day aspect is nomenclature used for genes or proteins in manuscripts. While the use of nomenclature standards advanced, use of common names can lead to ambiguities or confusion. In that case, the use of persistent identifier, such as the [Ensembl's Stable IDs](http://www.ensembl.org/info/genome/stable_ids/index.html) or [UniProt accession numbers](https://www.uniprot.org/help/accession_numbers) are preferred. The Digital Object identifier ([DOI](https://dx.doi.org/)) is used to make data, software, and other research outputs easily citable and trackable.
+
+Metadata can also facilitate data discovery. For example, metadata can be used on
+
+## Accessible
+
+Making data accessible to collaborators and the public increases its impact. Our INF aims to facilitate and automatize the limited or public distribution of data sets. The critical point is establishing user access with granularity.
+
+The Member Roles in SODAR are structured to provide varying levels of access and functionality within projects. Each user can hold only one role at a time within a category or project, with "project" serving as a generic term encompassing both categories and specific projects. The roles, listed in descending order of rights and functionality, include:
+
+1.  **Project Owner**: Holds full access to project data and functionality, with the ability to assign roles, including delegates. They can transfer ownership to another user.
+
+2.  **Project Delegate**: Possesses full access to project data and functionality, except for modifying owner or delegate roles. This role can only be assigned by a project owner.
+
+3.  **Project Contributor**: Granted access to create and modify data within a project, such as uploading files and editing sample sheets, with certain limitations. They cannot modify project metadata or user roles.
+
+4.  **Project Guest**: Limited to read-only access to project data.
+
+5.  **Project Finder**: Exclusive to users in categories, allowing them to view child categories and projects, along with member lists, without accessing project data or apps. This role is useful for staff members who need an overview of the category and project structure.
+
+Role inheritance is implemented, with roles inherited from parent categories. These inherited roles can be promoted for the current category or project but cannot be demoted. Inherited roles are denoted in the member list, indicating the category from which the role is inherited.
+
+Additionally, each project must have one local owner who is not inherited.
+
+Moreover, standardized metadata can facilitate data users to find your data set on specialized search engines, such as [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra), [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/), and [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), or other engines, such as the [METASra](https://metasra.biostat.wisc.edu/) or the [SRA explorer](https://sra-explorer.info/). The more data users find your data set, the more likely it receives citations.
+
+## Interoperable
+
+Data interoperability refers to the ability of different systems, organizations, and applications to access, exchange, and use data seamlessly and effectively. It ensures that data from diverse sources can be integrated and utilized cohesively, regardless of the differences in their formats, structures, or origins. For data to be interoperable, it must meet the following key criteria:
+
+1. Machine-readable.
+2.  Standardized formats and processing steps.
+3.  Using common vocabularies and ontologies.
+
+Adhering to these criteria facilitates data use and integration, as well further analysis, such meta analysis or database inclusion. The main action here is selecting a common ontology to describe experiments. Please check this resource to see how ontologies work: [ols4 left ventricle query](https://www.ebi.ac.uk/ols4/search?q=left+ventricle).
+
+![OLS4 query for left ventricle.](fig/OLS4_lv_query.png)
+
+## Reusable
+Data set reusability is the final goal of the FAIR framework. Reusability requires adhering to four key concepts:
+
+- The data complies with the Findable, Accessible and Interoperable principles.
+- Data and metadata can be validated.
+- Data permission and licensing.
+
+### Data validation
+
+Another important concept is providing standardized file formats and validating such files. Using MD5 checksums for file sharing and validation is important because it ensures data integrity. Before a file is shared, an MD5 checksum should be generated, which is a unique hash value representing the file's content. The recipient can generate their own MD5 checksum for the received file and compare it with the original checksum. If the values match, it confirms that the file has not been altered or corrupted during transmission, ensuring the file's integrity and authenticity.
+
+Here is an example of how to test a file checksum manually:
 
 
-
-- **Findable**: Metadata helps in uniquely identifying data for easy discovery.
-- **Accessible**: Metadata includes information on how data can be accessed.
-- **Interoperable**: Standardized metadata ensures that data can be integrated with other datasets.
-- **Reusable**: Metadata provides the information necessary for data to be reused effectively, including the conditions under which it can be reused.
-    
-
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
-
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
+``` bash
+echo "this is a text file." > test_checksum.txt
+cat test_checksum.txt
+> this is a text file.
+md5sum test_checksum.txt > test_checksum.md5
+cat test_checksum.md5
+> bc8a22e96d2b46f583a8c5fb055de679  test_checksum
+md5sum --check test_checksum.md5
+>test_checksum: OK
 ```
 
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
+``` output
+Error in running command bash
 ```
 
-:::::::::::::::::::::::::::::::::
+### Data licenses
 
+::: callout
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+#### Disclaimer
+This section does not aim to discuss legal aspects of data sharing, but to provide an overview of the importance of data licenses. For legal advice, please consult a legal expert.
+:::
 
-:::::::::::::::::::::::: solution 
+Data licenses are legal instruments that define the terms and conditions under which data can be used, shared, and distributed. They provide a framework for data users to understand their rights and obligations when using data, including the permissions granted by the data provider and any restrictions on data use. 
 
-You can add a line with at least three colons and a `solution` tag.
+In legal terms, data and software can only be re-used if it licensed. Data deposited to the SRA (Sequence Read Archive) is licensed under the [NCBI data use policy](https://www.ncbi.nlm.nih.gov/home/about/policies/). This license provides open access to raw sequencing data, including RNA-seq data, under the public domain license. This means the data can be freely used, modified, and shared by anyone for any purpose without restrictions.
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can include figures generated from R Markdown:
-
-
-```r
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-
-<div class="figure" style="text-align: center">
-<img src="fig/fair-principles-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
-<p class="caption">Sun arise each and every morning</p>
-</div>
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
+::: keypoints
+-   The FAIR framework is central for data and metadata management.
+:::
