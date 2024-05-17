@@ -92,11 +92,11 @@
   CRC1550 data management training material
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 62%" class="percentage">
-    62%
+<aside class="col-md-12 lesson-progress"><div style="width: 32%" class="percentage">
+    32%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 62%" aria-valuenow="62" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 32%" aria-valuenow="32" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -284,10 +284,9 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Introduces SODAR</li>
-<li>Oviewview of the main concepts</li>
+<ul><li>Introduces SODAR and overview of its building blocks.</li>
 <li>How the process for data and metadata upload works within the
-CRC1550-INF</li>
+CRC1550-INF.</li>
 </ul></div>
 </div>
 </div>
@@ -299,13 +298,13 @@ CRC1550-INF</li>
 <strong>D</strong>ata <strong>A</strong>ccess and
 <strong>R</strong>etrieval (<strong>SODAR</strong>) is a specialized
 system designed for managing data in OMICs research projects. The
-platform provides medical experts with a central location for navigating
-and coordinating data, connecting to other resources and systems. Key
+platform provides researchers with a central location for navigating and
+coordinating data, connecting to other resources and systems. Key
 features of SODAR include project-based access control, modeling study
 design metadata, large-scale data storage, file validation, and various
 tools for data management. SODAR aims to address challenges faced by
 scientists working on OMICs studies by offering a user-friendly
-interface for managing multi-assay studies and organizing raw dataset,
+interface for managing multi-assay studies and organizing raw data set,
 metadata and results in a single place. Most end users will use SODAR
 via its web-based GUI, while data stewards will use the REST APIs. SODAR
 server runs on the Django web server, models metadata with the ISA
@@ -317,9 +316,10 @@ available under the MIT license.</p>
 </div>
 <div class="section level1">
 <h1 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a></h1>
-<p><img src="fig/clipboard-1870335311.png" class="figure"> Figure 1. Overview of data
-workflow with SODAR. The next sections will detail each component.</p>
-</div>
+<figure><img src="fig/clipboard-1870335311.png" alt="Figure 1. Overview of data workflow with SODAR. The next sections will detail each component." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 1.</strong> Overview of data
+workflow with SODAR. The next sections will detail each component.</div>
+</figure></div>
 <div class="section level1">
 <h1 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a></h1>
 <p>The SODAR server is the main component of the system. It comprises
@@ -350,10 +350,11 @@ for local lookup</li>
 rollback for project and file operations</li>
 </ul><p>These apps are presented to end-users via the SODAR
 web-application:</p>
-<p><img src="fig/clipboard-3240582884.png" class="figure"> Figure 2: SODAR developers
+<figure><img src="fig/clipboard-3240582884.png" alt="Figure 2. SODAR developers provide a demo instance at this url." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 2.</strong> SODAR developers
 provide a demo instance at <a href="https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7" class="external-link">this
-url</a>.</p>
-</div>
+url</a>.</div>
+</figure></div>
 <div class="section level1">
 <h1 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a></h1>
 <p>iRODS stands for Integrated Rule-Oriented Data System, is the data
@@ -377,7 +378,7 @@ physical storage path (i.e., where the data is stored in the file
 system), allowing data objects within the same collection to be stored
 in different physical locations. Additionally, a data object in iRODS
 can have multiple replicas, which are exact copies of the file stored in
-different locations2</p>
+different locations.</p>
 <p>IRODs server has many features that are beyond the scope of this
 material.</p>
 <div class="section level4">
@@ -389,9 +390,10 @@ Integrated Genome Viewer (IGV), and Galaxy tools.</p>
 </div>
 <div class="section level3">
 <h3 id="sodar-naming-and-concepts">SODAR naming and concepts<a class="anchor" aria-label="anchor" href="#sodar-naming-and-concepts"></a></h3>
-<p><img src="fig/clipboard-3896476926.png" class="figure"> Figure 3. SODAR project
-overview page.</p>
-<div class="section level4">
+<figure><img src="fig/clipboard-3896476926.png" alt="Figure 3. SODAR project overview page." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 3.</strong> SODAR project
+overview page.</div>
+</figure><div class="section level4">
 <h4 id="web-ui">Web-UI<a class="anchor" aria-label="anchor" href="#web-ui"></a></h4>
 <p>SODAR web-UI is the main interface for users to interact with the
 system.</p>
@@ -461,8 +463,8 @@ various process by server admins.</p>
 </div>
 <div class="section level3">
 <h3 id="sodar-data-workflow-step-by-step-usage">SODAR data workflow step-by-step usage<a class="anchor" aria-label="anchor" href="#sodar-data-workflow-step-by-step-usage"></a></h3>
-<p><img src="fig/clipboard-3042118772.png" width="847" class="figure"> Figure 4.
-SODAR data workflow.</p>
+<p><img src="fig/clipboard-3042118772.png" width="847" class="figure"><strong>Figure
+4.</strong> SODAR data workflow.</p>
 <ol style="list-style-type: decimal"><li><p>Login into SODAR. Then create a project <a href="https://sodar.crc1550.com/project/project/create" class="external-link uri">https://sodar.crc1550.com/project/project/create</a>.</p></li>
 <li><p>Create a subproject <a href="https://sodar.crc1550.com/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar.crc1550.com/project/project/create/</a>&lt;project_uid&gt;.</p></li>
 <li><p>Create a sample sheet: Sample sheets &gt; Sheet operations &gt;
@@ -509,22 +511,23 @@ SODAR Service<a class="anchor" aria-label="anchor" href="#standard-operating-pro
 </div>
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<p>1. <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
-on SODAR data transfer</a></p>
-<p>2. <a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
-approach used for data transfer</a></p>
-<ol style="list-style-type: decimal"><li><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
-overview</a></li>
+<ol style="list-style-type: decimal"><li><p><a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
+on SODAR data transfer</a></p></li>
+<li><p><a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
+approach used for data transfer</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
+overview</a></p></li>
 </ol></div>
 <div class="section level2">
 <h2 id="section"></h2>
 </div>
 </div>
 <div class="section level1">
-<h1 id="faq-and-practical-notes">FAQ and practical notes:<a class="anchor" aria-label="anchor" href="#faq-and-practical-notes"></a></h1>
+<h1 id="faq">FAQ:<a class="anchor" aria-label="anchor" href="#faq"></a></h1>
 <div class="section level2">
 <h2 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a></h2>
-<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
+<p>iRODS directories can be accessed via the project pages <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a>
+but users don’t direct acces to the iRODS server</p>
 <div class="section level3">
 <h3 id="why-cubi-tk-sodar-ingest-fasq-is-not-working">Why &lt;cubi-tk sodar ingest-fasq&gt; is not working?<a class="anchor" aria-label="anchor" href="#why-cubi-tk-sodar-ingest-fasq-is-not-working"></a></h3>
 <p>The cubi-tk is a command line tool that allows to interact with SODAR

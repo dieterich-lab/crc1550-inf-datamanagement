@@ -404,9 +404,7 @@ represent the data (interoperability).</li>
 <li>Data owners: Persons responsible for generating the data and
 metadata.</li>
 <li>Data managers: The person responsible for managing the data and
-metadata.
-<!-- - Data stewards: The person responsible for ensuring that the data and metadata are accurate and reliable. -->
-</li>
+metadata.</li>
 <li>Data users: The person responsible for using the data and metadata
 to answer research questions and make decisions.</li>
 </ul>
@@ -441,11 +439,15 @@ objective of the data management team is to ensure the efficient
 management of unprocessed and processed data produced by high-throughput
 experiments by providing services (and interfaces) to manage and store
 data and metadata.</p>
-<figure><img src="https://lh7-us.googleusercontent.com/HIZrk0S_WDLJXpKYFcl6BfZY5or_grINIHr6JNW_5mZmpb3xLxy6_aQEcPiEAmGwL_pS6LpaJ9aPpHUEbDZ-DSDUpPtE_cciZNdvwZGSsqYUJ9br8Bzr_bacQ2UdG1-WFKlsMBUu9LBpergxc4EtppU" class="figure mx-auto d-block"></figure><p>There are three working groups: - The BioBanking working group is
-responsible for the collection, storage, and management of biological
-samples. - The Data Management working group. - The bioinformatics
-working group is responsible for the analysis of high-throughput
-data.</p>
+<figure><img src="https://lh7-us.googleusercontent.com/HIZrk0S_WDLJXpKYFcl6BfZY5or_grINIHr6JNW_5mZmpb3xLxy6_aQEcPiEAmGwL_pS6LpaJ9aPpHUEbDZ-DSDUpPtE_cciZNdvwZGSsqYUJ9br8Bzr_bacQ2UdG1-WFKlsMBUu9LBpergxc4EtppU" alt="The CRC1550-INF working program" class="figure mx-auto d-block"><div class="figcaption">The CRC1550-INF working program</div>
+</figure><p>There are three working groups:</p>
+<ul>
+<li><p>The BioBanking working group is responsible for the collection,
+storage, and management of biological samples.</p></li>
+<li><p>The Data Management working group.</p></li>
+<li><p>The bioinformatics working group is responsible for the analysis
+of high-throughput data.</p></li>
+</ul>
 <p>This course is focused on the Data Management working group.</p>
 <div class="section level3">
 <h3 id="findability">Findability<a class="anchor" aria-label="anchor" href="#findability"></a>
@@ -632,9 +634,9 @@ processes.</li>
 <p>There are a multitude of file formats used in bioinformatics, each
 with its specific use case. Some of the most commonly used file formats
 include:</p>
-<p><strong>FASTQ format</strong>: is sequence data formats, a text-based
-format for storing both an oligonucleotide sequence and its
-corresponding quality scores. Obtained after base calling procedure.</p>
+<p><strong>FASTQ format</strong>: a text-based format for storing both
+oligonucleotide sequences and its corresponding quality scores. Obtained
+after base calling procedure.</p>
 <div id="fastq-file-format" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -678,6 +680,9 @@ of use and flexibility.</li>
 <li>mzML: An XML-based open standard for storing raw mass spectrometry
 data, encompassing detailed spectral information and metadata.</li>
 </ul>
+<div class="section level3">
+<h3 id="types-of-file-formats">Types of file formats<a class="anchor" aria-label="anchor" href="#types-of-file-formats"></a>
+</h3>
 <p><strong>Proprietary formats:</strong> high-throughput machine such as
 Illumina, Nanopore, produce files before base calling. These files are
 in the form of binary files, and are not human-readable and depend on
@@ -687,13 +692,18 @@ data depending on the equipment vendor.</p>
 <p><strong>Processed file formats:</strong> formats whom data has been
 processed and are ready for downstream analysis. These formats are often
 tabular, and can be easily imported into R or Python for further
-analysis. Examples include: - <strong>Tabular formats</strong>: csv,
-xlsx, tsv, and others. - <strong>RData</strong>: R-specific binary
-format for storing R objects. - <strong>HDF5</strong>: A data model,
-library, and file format for storing and managing large and complex
-data. - <strong>BED, GFF, and GTF</strong>: These are used to store
+analysis. Examples include:</p>
+<ul>
+<li><p><strong>Tabular formats</strong>: csv, xlsx, tsv, and
+others.</p></li>
+<li><p><strong>RData</strong>: R-specific binary format for storing R
+objects.</p></li>
+<li><p><strong>HDF5</strong>: A data model, library, and file format for
+storing and managing large and complex data.</p></li>
+<li><p><strong>BED, GFF, and GTF</strong>: These are used to store
 genomic feature or annotations, such as gene locations, and
-structure.</p>
+structure.</p></li>
+</ul>
 <p>The scope of this lesson is to give an overview of file formats used
 in bioinformatics. It is important to understand that the different
 files a specific purpose, can be vendor-specific and that the choice of
@@ -718,19 +728,20 @@ process. This definition may change depending on context.</p>
 </div>
 </div>
 </div>
+</div>
 </section><section id="challenges-in-omics-data"><h2 class="section-heading">Challenges in OMICs data:<a class="anchor" aria-label="anchor" href="#challenges-in-omics-data"></a>
 </h2>
 <hr class="half-width">
 <p>There are many challenges involved in the use of OMICs datasets.</p>
 <ul>
 <li>
-<strong>Data storage</strong>: OMICs datasets can be large, and
+<strong>Data storage</strong>: OMICs data sets can be large, and
 require robust data storage and backup solutions. This is especially
 true for raw sequencing data, which can be many gigabytes in size. We
-expect the size of OMICs datasets to predict by the CRC to be in the
-order of 20 terabytes per year.</li>
+expect more than 20 terabytes of high-throughput data to be produce per
+year.</li>
 <li>
-<strong>Data analysis</strong>: OMICs datasets are complex, and
+<strong>Data analysis</strong>: OMICs data sets are complex, and
 require specialized methods for analysis.</li>
 <li>
 <strong>Standardization</strong>: As there are many file formats,
@@ -738,7 +749,7 @@ there are many data standards and protocols used in OMICs research. This
 lack of standardization make it difficult to compare data between
 different centres.</li>
 <li>
-<strong>Data sharing</strong>: OMICs datasets are required to be
+<strong>Data sharing</strong>: OMICs data sets are required to be
 shared upon publication.</li>
 </ul>
 <p>All the challenges can be mitigated through the use of the meta data
@@ -762,8 +773,8 @@ replicate the results of experiments.</p>
 <li>
 <strong>OMICs technologies</strong> are crucial for a holistic
 understanding of biological systems.</li>
-<li>Common file formats in bioinformatics serve specific purposes,
-facilitating data analysis and sharing.</li>
+<li>Common file formats in bioinformatics serve specific purposes and
+require specialized toolsets.</li>
 <li>Metadata plays a critical role in contextualizing and modeling OMICs
 data.</li>
 </ul>
@@ -790,7 +801,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are action can we take for to make our data FAIR?</li>
+<li>What actions can we take adhere to FAIR framework?</li>
 </ul>
 </div>
 </div>
@@ -800,8 +811,9 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Action Learn actionable Explain how metadata standardization plays a
-pivotal role in making data FAIR</li>
+<li>Understand the FAIR framework applied to OMICs research</li>
+<li>Discuss solution the INF data management team can provide so the
+project adhere to the FAIR framework</li>
 </ul>
 </div>
 </div>
@@ -811,9 +823,7 @@ pivotal role in making data FAIR</li>
 <div class="section level1">
 <h1 id="reminder-of-fair-framework">Reminder of FAIR framework<a class="anchor" aria-label="anchor" href="#reminder-of-fair-framework"></a>
 </h1>
-<p>This chapter aims to give a deep dive on FAIR framework and what
-solution our infrastructure team can provide using CardioCloud and
-SODAR.</p>
+<p>This chapter aims to give a deep dive on FAIR framework.</p>
 <ul>
 <li>
 <strong>Findable</strong>: Metadata helps in uniquely identifying
@@ -962,6 +972,13 @@ and authenticity.</p>
 </div>
 </div>
 <div class="section level3">
+<h3 id="metadata-validation">Metadata validation<a class="anchor" aria-label="anchor" href="#metadata-validation"></a>
+</h3>
+<p>There are specialized tools for validating metadata. SODAR uses <a href="https://github.com/bihealth/altamisa" class="external-link uri">altamisa</a>.
+SODAR user interface will display errors and warning in case of parsing
+errors for the metadata files.</p>
+</div>
+<div class="section level3">
 <h3 id="data-licenses">Data licenses<a class="anchor" aria-label="anchor" href="#data-licenses"></a>
 </h3>
 <div id="disclaimer" class="callout">
@@ -1000,6 +1017,7 @@ any purpose without restrictions.</p>
 <div class="callout-content">
 <ul>
 <li>The FAIR framework is central for data and metadata management.</li>
+<li>Data sets can be made more reusable by taking simple actions.</li>
 </ul>
 </div>
 </div>
@@ -1036,10 +1054,9 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Introduces SODAR</li>
-<li>Oviewview of the main concepts</li>
+<li>Introduces SODAR and overview of its building blocks.</li>
 <li>How the process for data and metadata upload works within the
-CRC1550-INF</li>
+CRC1550-INF.</li>
 </ul>
 </div>
 </div>
@@ -1053,13 +1070,13 @@ CRC1550-INF</li>
 <strong>D</strong>ata <strong>A</strong>ccess and
 <strong>R</strong>etrieval (<strong>SODAR</strong>) is a specialized
 system designed for managing data in OMICs research projects. The
-platform provides medical experts with a central location for navigating
-and coordinating data, connecting to other resources and systems. Key
+platform provides researchers with a central location for navigating and
+coordinating data, connecting to other resources and systems. Key
 features of SODAR include project-based access control, modeling study
 design metadata, large-scale data storage, file validation, and various
 tools for data management. SODAR aims to address challenges faced by
 scientists working on OMICs studies by offering a user-friendly
-interface for managing multi-assay studies and organizing raw dataset,
+interface for managing multi-assay studies and organizing raw data set,
 metadata and results in a single place. Most end users will use SODAR
 via its web-based GUI, while data stewards will use the REST APIs. SODAR
 server runs on the Django web server, models metadata with the ISA
@@ -1072,8 +1089,10 @@ available under the MIT license.</p>
 <div class="section level1">
 <h1 id="sodar-components-and-data-workflow">SODAR components and data workflow<a class="anchor" aria-label="anchor" href="#sodar-components-and-data-workflow"></a>
 </h1>
-<p><img src="fig/clipboard-1870335311.png" class="figure"> Figure 1. Overview of data
-workflow with SODAR. The next sections will detail each component.</p>
+<figure><img src="fig/clipboard-1870335311.png" alt="Figure 1. Overview of data workflow with SODAR. The next sections will detail each component." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 1.</strong> Overview of data
+workflow with SODAR. The next sections will detail each component.</div>
+</figure>
 </div>
 <div class="section level1">
 <h1 id="sodar-server">SODAR server<a class="anchor" aria-label="anchor" href="#sodar-server"></a>
@@ -1108,9 +1127,11 @@ rollback for project and file operations</li>
 </ul>
 <p>These apps are presented to end-users via the SODAR
 web-application:</p>
-<p><img src="fig/clipboard-3240582884.png" class="figure"> Figure 2: SODAR developers
+<figure><img src="fig/clipboard-3240582884.png" alt="Figure 2. SODAR developers provide a demo instance at this url." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 2.</strong> SODAR developers
 provide a demo instance at <a href="https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7" class="external-link">this
-url</a>.</p>
+url</a>.</div>
+</figure>
 </div>
 <div class="section level1">
 <h1 id="irods-server">iRODS server<a class="anchor" aria-label="anchor" href="#irods-server"></a>
@@ -1136,7 +1157,7 @@ physical storage path (i.e., where the data is stored in the file
 system), allowing data objects within the same collection to be stored
 in different physical locations. Additionally, a data object in iRODS
 can have multiple replicas, which are exact copies of the file stored in
-different locations2</p>
+different locations.</p>
 <p>IRODs server has many features that are beyond the scope of this
 material.</p>
 <div class="section level4">
@@ -1150,9 +1171,10 @@ Integrated Genome Viewer (IGV), and Galaxy tools.</p>
 <div class="section level3">
 <h3 id="sodar-naming-and-concepts">SODAR naming and concepts<a class="anchor" aria-label="anchor" href="#sodar-naming-and-concepts"></a>
 </h3>
-<p><img src="fig/clipboard-3896476926.png" class="figure"> Figure 3. SODAR project
-overview page.</p>
-<div class="section level4">
+<figure><img src="fig/clipboard-3896476926.png" alt="Figure 3. SODAR project overview page." class="figure mx-auto d-block"><div class="figcaption">
+<strong>Figure 3.</strong> SODAR project
+overview page.</div>
+</figure><div class="section level4">
 <h4 id="web-ui">Web-UI<a class="anchor" aria-label="anchor" href="#web-ui"></a>
 </h4>
 <p>SODAR web-UI is the main interface for users to interact with the
@@ -1231,8 +1253,8 @@ various process by server admins.</p>
 <div class="section level3">
 <h3 id="sodar-data-workflow-step-by-step-usage">SODAR data workflow step-by-step usage<a class="anchor" aria-label="anchor" href="#sodar-data-workflow-step-by-step-usage"></a>
 </h3>
-<p><img src="fig/clipboard-3042118772.png" width="847" class="figure"> Figure 4.
-SODAR data workflow.</p>
+<p><img src="fig/clipboard-3042118772.png" width="847" class="figure"><strong>Figure
+4.</strong> SODAR data workflow.</p>
 <ol style="list-style-type: decimal">
 <li><p>Login into SODAR. Then create a project <a href="https://sodar.crc1550.com/project/project/create" class="external-link uri">https://sodar.crc1550.com/project/project/create</a>.</p></li>
 <li><p>Create a subproject <a href="https://sodar.crc1550.com/project/project/create/f2688cf8-67f2-450d-ae69-97d5fda66faf" class="external-link uri">https://sodar.crc1550.com/project/project/create/</a>&lt;project_uid&gt;.</p></li>
@@ -1292,13 +1314,13 @@ SODAR Service<a class="anchor" aria-label="anchor" href="#standard-operating-pro
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<p>1. <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
-on SODAR data transfer</a></p>
-<p>2. <a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
-approach used for data transfer</a></p>
 <ol style="list-style-type: decimal">
-<li><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
-overview</a></li>
+<li><p><a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link">Documentation
+on SODAR data transfer</a></p></li>
+<li><p><a href="https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd" class="external-link">Current
+approach used for data transfer</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=LQ8foUpjnqs" class="external-link">SODAR
+overview</a></p></li>
 </ol>
 </div>
 <div class="section level2">
@@ -1306,12 +1328,13 @@ overview</a></li>
 </div>
 </div>
 <div class="section level1">
-<h1 id="faq-and-practical-notes">FAQ and practical notes:<a class="anchor" aria-label="anchor" href="#faq-and-practical-notes"></a>
+<h1 id="faq">FAQ:<a class="anchor" aria-label="anchor" href="#faq"></a>
 </h1>
 <div class="section level2">
 <h2 id="how-to-access-irods">How to access iRODS:<a class="anchor" aria-label="anchor" href="#how-to-access-irods"></a>
 </h2>
-<p>iRODS directories can be accessed . <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a></p>
+<p>iRODS directories can be accessed via the project pages <a href="https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html" class="external-link uri">https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html</a>
+but users don’t direct acces to the iRODS server</p>
 <div class="section level3">
 <h3 id="why-cubi-tk-sodar-ingest-fasq-is-not-working">Why &lt;cubi-tk sodar ingest-fasq&gt; is not working?<a class="anchor" aria-label="anchor" href="#why-cubi-tk-sodar-ingest-fasq-is-not-working"></a>
 </h3>
@@ -1466,10 +1489,10 @@ can be easily adapted to other types of experiments.</p>
 </h3>
 <table class="table">
 <colgroup>
-<col width="13%">
-<col width="5%">
-<col width="41%">
-<col width="40%">
+<col width="21%">
+<col width="21%">
+<col width="28%">
+<col width="27%">
 </colgroup>
 <thead><tr class="header">
 <th>Metadata Field</th>
@@ -1529,10 +1552,10 @@ can be easily adapted to other types of experiments.</p>
 </h3>
 <table class="table">
 <colgroup>
-<col width="8%">
-<col width="4%">
-<col width="33%">
-<col width="53%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="37%">
 </colgroup>
 <thead><tr class="header">
 <th>Metadata Field</th>
@@ -1692,12 +1715,12 @@ either nucleus or mitochondria)</td>
 <div class="section level3">
 <h3 id="assay-metadata">Assay metadata<a class="anchor" aria-label="anchor" href="#assay-metadata"></a>
 </h3>
-<table style="width:100%;" class="table">
+<table class="table">
 <colgroup>
-<col width="13%">
-<col width="4%">
-<col width="41%">
-<col width="40%">
+<col width="21%">
+<col width="21%">
+<col width="28%">
+<col width="27%">
 </colgroup>
 <thead><tr class="header">
 <th>Metadata Field</th>
@@ -1773,93 +1796,9 @@ either nucleus or mitochondria)</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Data Transformation Protocol</td>
-<td>recommended</td>
-<td>Protocol used for data transformation</td>
-<td>Protocol names, descriptions, URIs, and versions</td>
-</tr>
-<tr class="odd">
-<td>Normalization Protocol</td>
-<td>recommended</td>
-<td>Protocol used for data normalization</td>
-<td>Protocol names, descriptions, URIs, and versions</td>
-</tr>
-<tr class="even">
-<td>Quality Control Protocol</td>
-<td>recommended</td>
-<td>Protocol used for quality control</td>
-<td>Protocol names, descriptions, URIs, and versions</td>
-</tr>
-<tr class="odd">
-<td>Data File</td>
-<td>required</td>
-<td>File name of the data file generated by the assay</td>
 <td></td>
-</tr>
-<tr class="even">
-<td>Data Format</td>
-<td>required</td>
-<td>Format of the data file generated by the assay</td>
 <td></td>
-</tr>
-<tr class="odd">
-<td>Data URI</td>
-<td>recommended</td>
-<td>URI of the data file generated by the assay</td>
 <td></td>
-</tr>
-<tr class="even">
-<td>Protocol Parameters</td>
-<td>recommended</td>
-<td>Parameters used in each protocol</td>
-<td>Names, types, descriptions, and values</td>
-</tr>
-<tr class="odd">
-<td>Protocol Components</td>
-<td>recommended</td>
-<td>Components used in each protocol</td>
-<td>Component names, types, descriptions, and URIs</td>
-</tr>
-<tr class="even">
-<td>Protocol Performance Comments</td>
-<td>optional</td>
-<td>Comments on the performance of each protocol</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Data Types</td>
-<td>recommended</td>
-<td>Types of data generated from the assay</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Data Description</td>
-<td>optional</td>
-<td>Description of the data generated from the assay</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Experimental Design Type</td>
-<td>recommended</td>
-<td>Type of experimental design used in the assay</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Experimental Design Description</td>
-<td>optional</td>
-<td>Description of the experimental design used in the assay</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Replication</td>
-<td>optional</td>
-<td>Information about the replication of the assay</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Factor Values</td>
-<td>recommended</td>
-<td>Experimental factors and their values specific to the assay</td>
 <td></td>
 </tr>
 </tbody>
@@ -1873,20 +1812,16 @@ either nucleus or mitochondria)</td>
 </h3>
 <div class="callout-content">
 <ul>
-<li><p>Comprehensive Repository: The SRA serves as a comprehensive
-public repository for high-throughput sequencing data across all life
-forms, supporting a wide range of genomic research by providing access
-to raw sequencing data and alignments.</p></li>
-<li><p>Structured Metadata Organization: The organization of SRA
-metadata into a structured hierarchy—comprising Studies, Experiments,
-Samples, Runs, and Submissions—facilitates precise and efficient data
-deposition, retrieval, and analysis, underscoring the importance of
-detailed metadata in the scientific research process.</p></li>
-<li><p>Access and Deposition Flexibility: While access to the SRA
-database is facilitated through the NCBI website, the database also
-highlights the principles of controlled access and privacy for certain
-data sets, alongside offering multiple pathways for data deposition to
-accommodate the needs of diverse research projects and goals.</p></li>
+<li>The SRA serves is public repository for high-throughput sequencing
+data, supporting a wide range of genomic research by providing access to
+raw sequencing data, alignments and feature counts.</li>
+<li>Metadata Organization needs to be organized. Although ISA-files
+don’t directly map to SRA metadata model, there is a clear separation
+between required and optional items. There is also some flexibility to
+adapt the SODAR system to a given experiment.</li>
+<li>While access to the SRA database is facilitated through the NCBI
+website, the database also highlights the principles of controlled
+access and privacy for certain data sets.</li>
 </ul>
 </div>
 </div>

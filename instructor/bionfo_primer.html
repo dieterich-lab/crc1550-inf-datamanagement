@@ -366,9 +366,9 @@ processes.</li>
 <hr class="half-width"><p>There are a multitude of file formats used in bioinformatics, each
 with its specific use case. Some of the most commonly used file formats
 include:</p>
-<p><strong>FASTQ format</strong>: is sequence data formats, a text-based
-format for storing both an oligonucleotide sequence and its
-corresponding quality scores. Obtained after base calling procedure.</p>
+<p><strong>FASTQ format</strong>: a text-based format for storing both
+oligonucleotide sequences and its corresponding quality scores. Obtained
+after base calling procedure.</p>
 <div id="fastq-file-format" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -410,7 +410,9 @@ identifications, quantification results, and metadata, designed for ease
 of use and flexibility.</li>
 <li>mzML: An XML-based open standard for storing raw mass spectrometry
 data, encompassing detailed spectral information and metadata.</li>
-</ul><p><strong>Proprietary formats:</strong> high-throughput machine such as
+</ul><div class="section level3">
+<h3 id="types-of-file-formats">Types of file formats<a class="anchor" aria-label="anchor" href="#types-of-file-formats"></a></h3>
+<p><strong>Proprietary formats:</strong> high-throughput machine such as
 Illumina, Nanopore, produce files before base calling. These files are
 in the form of binary files, and are not human-readable and depend on
 vendor-specific methods for signal processing.</p>
@@ -419,14 +421,17 @@ data depending on the equipment vendor.</p>
 <p><strong>Processed file formats:</strong> formats whom data has been
 processed and are ready for downstream analysis. These formats are often
 tabular, and can be easily imported into R or Python for further
-analysis. Examples include: - <strong>Tabular formats</strong>: csv,
-xlsx, tsv, and others. - <strong>RData</strong>: R-specific binary
-format for storing R objects. - <strong>HDF5</strong>: A data model,
-library, and file format for storing and managing large and complex
-data. - <strong>BED, GFF, and GTF</strong>: These are used to store
+analysis. Examples include:</p>
+<ul><li><p><strong>Tabular formats</strong>: csv, xlsx, tsv, and
+others.</p></li>
+<li><p><strong>RData</strong>: R-specific binary format for storing R
+objects.</p></li>
+<li><p><strong>HDF5</strong>: A data model, library, and file format for
+storing and managing large and complex data.</p></li>
+<li><p><strong>BED, GFF, and GTF</strong>: These are used to store
 genomic feature or annotations, such as gene locations, and
-structure.</p>
-<p>The scope of this lesson is to give an overview of file formats used
+structure.</p></li>
+</ul><p>The scope of this lesson is to give an overview of file formats used
 in bioinformatics. It is important to understand that the different
 files a specific purpose, can be vendor-specific and that the choice of
 file format can have a significant impact on the downstream analysis of
@@ -450,17 +455,18 @@ process. This definition may change depending on context.</p>
 </div>
 </div>
 </div>
+</div>
 </section><section id="challenges-in-omics-data"><h2 class="section-heading">Challenges in OMICs data:<a class="anchor" aria-label="anchor" href="#challenges-in-omics-data"></a>
 </h2>
 <hr class="half-width"><p>There are many challenges involved in the use of OMICs datasets.</p>
 <ul><li>
-<strong>Data storage</strong>: OMICs datasets can be large, and
+<strong>Data storage</strong>: OMICs data sets can be large, and
 require robust data storage and backup solutions. This is especially
 true for raw sequencing data, which can be many gigabytes in size. We
-expect the size of OMICs datasets to predict by the CRC to be in the
-order of 20 terabytes per year.</li>
+expect more than 20 terabytes of high-throughput data to be produce per
+year.</li>
 <li>
-<strong>Data analysis</strong>: OMICs datasets are complex, and
+<strong>Data analysis</strong>: OMICs data sets are complex, and
 require specialized methods for analysis.</li>
 <li>
 <strong>Standardization</strong>: As there are many file formats,
@@ -468,7 +474,7 @@ there are many data standards and protocols used in OMICs research. This
 lack of standardization make it difficult to compare data between
 different centres.</li>
 <li>
-<strong>Data sharing</strong>: OMICs datasets are required to be
+<strong>Data sharing</strong>: OMICs data sets are required to be
 shared upon publication.</li>
 </ul><p>All the challenges can be mitigated through the use of the meta data
 managing plan. Metadata is essential for understanding the context of
@@ -490,8 +496,8 @@ replicate the results of experiments.</p>
 <ul><li>
 <strong>OMICs technologies</strong> are crucial for a holistic
 understanding of biological systems.</li>
-<li>Common file formats in bioinformatics serve specific purposes,
-facilitating data analysis and sharing.</li>
+<li>Common file formats in bioinformatics serve specific purposes and
+require specialized toolsets.</li>
 <li>Metadata plays a critical role in contextualizing and modeling OMICs
 data.</li>
 </ul></div>
