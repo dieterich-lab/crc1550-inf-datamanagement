@@ -1,6 +1,6 @@
 ---
 title: 'SODAR: System for Omics Data Access and Retrieval.'
-teaching: 0
+teaching: 30
 exercises: 0
 output: pdf_document
 ---
@@ -10,20 +10,19 @@ output: pdf_document
 :::
 
 ::: objectives
--   Introduces SODAR
--   Oviewview of the main concepts
--   How the process for data and metadata upload works within the CRC1550-INF
+-   Introduces SODAR and overview of its building blocks.
+-   How the process for data and metadata upload works within the CRC1550-INF.
 :::
 
 # Overview
 
 ![](fig/SodarLogo.svg)
 
-**S**ystem for **O**mics **D**ata **A**ccess and **R**etrieval (**SODAR**) is a specialized system designed for managing data in OMICs research projects. The platform provides medical experts with a central location for navigating and coordinating data, connecting to other resources and systems. Key features of SODAR include project-based access control, modeling study design metadata, large-scale data storage, file validation, and various tools for data management. SODAR aims to address challenges faced by scientists working on OMICs studies by offering a user-friendly interface for managing multi-assay studies and organizing raw dataset, metadata and results in a single place. Most end users will use SODAR via its web-based GUI, while data stewards will use the REST APIs. SODAR server runs on the Django web server, models metadata with the ISA specification, and uses iRODS for file storage. SODAR is developed by the [Core Unit Bioinformatics](https://www.cubi.bihealth.org/) at the [Berlin Institute of Health](https://www.bihealth.org/). The software is written in Python 3 and freely available under the MIT license.
+**S**ystem for **O**mics **D**ata **A**ccess and **R**etrieval (**SODAR**) is a specialized system designed for managing data in OMICs research projects. The platform provides researchers with a central location for navigating and coordinating data, connecting to other resources and systems. Key features of SODAR include project-based access control, modeling study design metadata, large-scale data storage, file validation, and various tools for data management. SODAR aims to address challenges faced by scientists working on OMICs studies by offering a user-friendly interface for managing multi-assay studies and organizing raw data set, metadata and results in a single place. Most end users will use SODAR via its web-based GUI, while data stewards will use the REST APIs. SODAR server runs on the Django web server, models metadata with the ISA specification, and uses iRODS for file storage. SODAR is developed by the [Core Unit Bioinformatics](https://www.cubi.bihealth.org/) at the [Berlin Institute of Health](https://www.bihealth.org/). The software is written in Python 3 and freely available under the MIT license.
 
 # SODAR components and data workflow
 
-![](fig/clipboard-1870335311.png) Figure 1. Overview of data workflow with SODAR. The next sections will detail each component.
+![**Figure 1.** Overview of data workflow with SODAR. The next sections will detail each component.](fig/clipboard-1870335311.png)
 
 # SODAR server
 
@@ -39,7 +38,7 @@ The SODAR server is the main component of the system. It comprises several modul
 
 These apps are presented to end-users via the SODAR web-application:
 
-![](fig/clipboard-3240582884.png) Figure 2: SODAR developers provide a demo instance at [this url](https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7).
+![**Figure 2.** SODAR developers provide a demo instance at [this url](https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7).](fig/clipboard-3240582884.png)
 
 # iRODS server
 
@@ -47,7 +46,7 @@ iRODS stands for Integrated Rule-Oriented Data System, is the data management sy
 
 The iCAT server serves as a metadata catalog that supports large facility experimental data, linking all aspects of the research chain from proposal through to publication. It utilizes a relational database for storing metadata in the form of "triples," consisting of an attribute field, a value field, and a unit field.
 
-An **iRODS collection** is a fundamental concept in iRODS that organizes data objects into a hierarchical structure. In iRODS, collections are similar to subdirectories and are used to group related data objects together. These collections do not reference the physical storage path (i.e., where the data is stored in the file system), allowing data objects within the same collection to be stored in different physical locations. Additionally, a data object in iRODS can have multiple replicas, which are exact copies of the file stored in different locations2
+An **iRODS collection** is a fundamental concept in iRODS that organizes data objects into a hierarchical structure. In iRODS, collections are similar to subdirectories and are used to group related data objects together. These collections do not reference the physical storage path (i.e., where the data is stored in the file system), allowing data objects within the same collection to be stored in different physical locations. Additionally, a data object in iRODS can have multiple replicas, which are exact copies of the file stored in different locations.
 
 IRODs server has many features that are beyond the scope of this material.
 
@@ -57,7 +56,7 @@ Davrods provides access to iRODS servers using the WebDAV protocol, a similar pr
 
 ### SODAR naming and concepts
 
-![](fig/clipboard-3896476926.png) Figure 3. SODAR project overview page.
+![**Figure 3.** SODAR project overview page.](fig/clipboard-3896476926.png)
 
 #### Web-UI
 
@@ -93,7 +92,7 @@ The SODAR server contains REST-API that allow the automation of various process 
 
 ### SODAR data workflow step-by-step usage
 
-![](fig/clipboard-3042118772.png){width="847"} Figure 4. SODAR data workflow.
+![](fig/clipboard-3042118772.png){width="847"} **Figure 4.** SODAR data workflow.
 
 1.  Login into SODAR. Then create a project <https://sodar.crc1550.com/project/project/create>.
 
@@ -140,19 +139,19 @@ The SOP is available here: <https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5K
 
 ## References
 
-1\. [Documentation on SODAR data transfer](https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html)
+1.  [Documentation on SODAR data transfer](https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html)
 
-2\. [Current approach used for data transfer](https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd)
+2.  [Current approach used for data transfer](https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd)
 
-1.  [SODAR overview](https://www.youtube.com/watch?v=LQ8foUpjnqs)
+3.  [SODAR overview](https://www.youtube.com/watch?v=LQ8foUpjnqs)
 
 ## 
 
-# FAQ and practical notes:
+# FAQ:
 
 ## How to access iRODS:
 
-iRODS directories can be accessed . <https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html>
+iRODS directories can be accessed via the project pages <https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html> but users don't direct acces to the iRODS server
 
 ### Why \<cubi-tk sodar ingest-fasq\> is not working?
 

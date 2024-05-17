@@ -5,16 +5,17 @@ exercises: 0
 ---
 
 ::: questions
--   What are action can we take for to make our data FAIR?
+-   What actions can we take adhere to FAIR framework?
 :::
 
 ::: objectives
--   Action Learn actionable Explain how metadata standardization plays a pivotal role in making data FAIR
+-   Understand the FAIR framework applied to OMICs research
+-   Discuss solution the INF data management team can provide so the project adhere to the FAIR framework
 :::
 
 # Reminder of FAIR framework
 
-This chapter aims to give a deep dive on FAIR framework and what solution our infrastructure team can provide using CardioCloud and SODAR.
+This chapter aims to give a deep dive on FAIR framework.
 
 -   **Findable**: Metadata helps in uniquely identifying data for easy discovery.
 -   **Accessible**: Metadata includes information on how data can be accessed.
@@ -55,7 +56,7 @@ Moreover, standardized metadata can facilitate data users to find your data set 
 
 Data interoperability refers to the ability of different systems, organizations, and applications to access, exchange, and use data seamlessly and effectively. It ensures that data from diverse sources can be integrated and utilized cohesively, regardless of the differences in their formats, structures, or origins. For data to be interoperable, it must meet the following key criteria:
 
-1. Machine-readable.
+1.  Machine-readable.
 2.  Standardized formats and processing steps.
 3.  Using common vocabularies and ontologies.
 
@@ -64,11 +65,12 @@ Adhering to these criteria facilitates data use and integration, as well further
 ![OLS4 query for left ventricle.](fig/OLS4_lv_query.png)
 
 ## Reusable
+
 Data set reusability is the final goal of the FAIR framework. Reusability requires adhering to four key concepts:
 
-- The data complies with the Findable, Accessible and Interoperable principles.
-- Data and metadata can be validated.
-- Data permission and licensing.
+-   The data complies with the Findable, Accessible and Interoperable principles.
+-   Data and metadata can be validated.
+-   Data permission and licensing.
 
 ### Data validation
 
@@ -92,18 +94,23 @@ md5sum --check test_checksum.md5
 Error in running command bash
 ```
 
+### Metadata validation
+
+There are specialized tools for validating metadata. SODAR uses [altamisa](https://github.com/bihealth/altamisa){.uri}. SODAR user interface will display errors and warning in case of parsing errors for the metadata files.
+
 ### Data licenses
 
 ::: callout
-
 #### Disclaimer
+
 This section does not aim to discuss legal aspects of data sharing, but to provide an overview of the importance of data licenses. For legal advice, please consult a legal expert.
 :::
 
-Data licenses are legal instruments that define the terms and conditions under which data can be used, shared, and distributed. They provide a framework for data users to understand their rights and obligations when using data, including the permissions granted by the data provider and any restrictions on data use. 
+Data licenses are legal instruments that define the terms and conditions under which data can be used, shared, and distributed. They provide a framework for data users to understand their rights and obligations when using data, including the permissions granted by the data provider and any restrictions on data use.
 
 In legal terms, data and software can only be re-used if it licensed. Data deposited to the SRA (Sequence Read Archive) is licensed under the [NCBI data use policy](https://www.ncbi.nlm.nih.gov/home/about/policies/). This license provides open access to raw sequencing data, including RNA-seq data, under the public domain license. This means the data can be freely used, modified, and shared by anyone for any purpose without restrictions.
 
 ::: keypoints
 -   The FAIR framework is central for data and metadata management.
+-   Data sets can be made more reusable by taking simple actions.
 :::
