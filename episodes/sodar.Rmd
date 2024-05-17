@@ -5,21 +5,20 @@ exercises: 0
 output: pdf_document
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
-
-- How to use SODAR for data and metadata entry?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+::: questions
+-   How to use SODAR for data and metadata entry?
+:::
 
 ::: objectives
-- Introduces SODAR
-- Oviewview of the main concepts
-- How the process for data and metadata upload works within the CRC1550-INF
+-   Introduces SODAR
+-   Oviewview of the main concepts
+-   How the process for data and metadata upload works within the CRC1550-INF
 :::
 
 # Overview
 
 ![](fig/SodarLogo.svg)
+
 **S**ystem for **O**mics **D**ata **A**ccess and **R**etrieval (**SODAR**) is a specialized system designed for managing data in OMICs research projects. The platform provides medical experts with a central location for navigating and coordinating data, connecting to other resources and systems. Key features of SODAR include project-based access control, modeling study design metadata, large-scale data storage, file validation, and various tools for data management. SODAR aims to address challenges faced by scientists working on OMICs studies by offering a user-friendly interface for managing multi-assay studies and organizing raw dataset, metadata and results in a single place. Most end users will use SODAR via its web-based GUI, while data stewards will use the REST APIs. SODAR server runs on the Django web server, models metadata with the ISA specification, and uses iRODS for file storage. SODAR is developed by the [Core Unit Bioinformatics](https://www.cubi.bihealth.org/) at the [Berlin Institute of Health](https://www.bihealth.org/). The software is written in Python 3 and freely available under the MIT license.
 
 # SODAR components and data workflow
@@ -40,7 +39,7 @@ The SODAR server is the main component of the system. It comprises several modul
 
 These apps are presented to end-users via the SODAR web-application:
 
-![](fig/clipboard-3240582884.png) Figure 2: SODAR developers provide a demo instance at [this url](<https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7>).
+![](fig/clipboard-3240582884.png) Figure 2: SODAR developers provide a demo instance at [this url](https://sodar-demo.cubi.bihealth.org/samplesheets/a1e84b38-568d-44e7-b81f-43ae81927187#/study/473c5d99-532b-4c31-a056-8e58d16a6bb7).
 
 # iRODS server
 
@@ -58,8 +57,7 @@ Davrods provides access to iRODS servers using the WebDAV protocol, a similar pr
 
 ### SODAR naming and concepts
 
-![](fig/clipboard-3896476926.png)
-Figure 3. SODAR project overview page.
+![](fig/clipboard-3896476926.png) Figure 3. SODAR project overview page.
 
 #### Web-UI
 
@@ -95,8 +93,7 @@ The SODAR server contains REST-API that allow the automation of various process 
 
 ### SODAR data workflow step-by-step usage
 
-![](fig/clipboard-3042118772.png){width="847"}
-Figure 4. SODAR data workflow.
+![](fig/clipboard-3042118772.png){width="847"} Figure 4. SODAR data workflow.
 
 1.  Login into SODAR. Then create a project <https://sodar.crc1550.com/project/project/create>.
 
@@ -104,22 +101,42 @@ Figure 4. SODAR data workflow.
 
 3.  Create a sample sheet: Sample sheets \> Sheet operations \> Create from template and `Select ISA-Tab Template`.
 
-4. Activate the irods server on Sample Sheet section.
+4.  Activate the irods server on Sample Sheet section.
 
-5. Files will be uploaded by the data management team. These are the options:
+5.  Files will be uploaded by the data management team. These are the options:
 
-    1.  Use \<[cubi-tk](https://github.com/bihealth/cubi-tk) [sodar ingest](https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/docs_manual/man_sodar_ingest.rst#L4)\>
-    cubi-tk sodar ingest --sodar-url <url> --sodar-api-token <api_token> <file> <landing_zone_uid> 
+    1.  Use \<[cubi-tk](https://github.com/bihealth/cubi-tk) [sodar ingest](https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/docs_manual/man_sodar_ingest.rst#L4)\> cubi-tk sodar ingest --sodar-url <url> --sodar-api-token <api_token> <file> <landing_zone_uid>
 
     2.  Use iRODs \<[iput](https://docs.irods.org/master/icommands/user/#iput)\>
 
-5.  Call SODAR validation to check whether the data upload was successful. 
+6.  Call SODAR validation to check whether the data upload was successful.
 
-6. Modify or fix any entries.
+7.  Modify or fix any entries, if required.
 
-# Standard Operating Procedure for Data and Metadata Registry with SODAR Service
+### Creating and filling a sample sheet
 
-The SOP is avaiable here: https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP
+1.  Pick `Sample Sheets` on left column.
+2.  On Sheet operation, select create from template
+
+![](images/clipboard-1391538419.png)
+
+3.  Select an ISA-Tab template
+
+![](images/clipboard-2875853019.png)
+
+4.  Fill the form:
+
+![](images/clipboard-934212931.png)
+
+::: callout
+#### Note
+
+The current templates are not fully optimized for our use-case. Fell free to reach out to the data management team if you have question, concerns or suggestions.
+:::
+
+#### Standard Operating Procedure for Data and Metadata Registry with SODAR Service
+
+The SOP is available here: <https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP>
 
 ## References
 
@@ -127,22 +144,20 @@ The SOP is avaiable here: https://cloud.crc1550.com/index.php/s/nW6CGRiDHPtP5KP
 
 2\. [Current approach used for data transfer](https://gist.github.com/tbrittoborges/5a7ee1e3b59be89ddd66aa90c80583fd)
 
-1. [SODAR overview](https://www.youtube.com/watch?v=LQ8foUpjnqs)
+1.  [SODAR overview](https://www.youtube.com/watch?v=LQ8foUpjnqs)
 
 ## 
 
-# FAQ and pratical notes:
+# FAQ and practical notes:
 
 ## How to access iRODS:
 
-iRODS directories can be accessed .
-<https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html>
+iRODS directories can be accessed . <https://sodar-server.readthedocs.io/en/latest/data_transfer_irods.html>
 
 ### Why \<cubi-tk sodar ingest-fasq\> is not working?
 
 The cubi-tk is a command line tool that allows to interact with SODAR server. The command `cubi-tk sodar ingest-fasq` because of configuration error. Use \<cubi-tk sodar ingest\>. See implementation details on [cubi-tk](https://github.com/bihealth/cubi-tk/blob/0f7f5b2d46d0f955eb70faf8741cc44033fe63ce/cubi_tk/sodar/ingest.py).
 
-:::::: keypoints
- - SODAR is a easy-to-use and open source solution for data management.
- - It allows us to adhere to the FAIR framework. 
-::::::
+::: keypoints
+-   SODAR is a user friendly data management solution that adheres to the FAIR framework.
+:::
