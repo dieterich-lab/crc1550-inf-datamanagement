@@ -117,15 +117,15 @@ The SODAR server contains REST-API that allow the automation of various process 
 1.  Pick `Sample Sheets` on left column.
 2.  On Sheet operation, select create from template
 
-![](images/clipboard-1391538419.png)
+![Sheet operation dropdown](fig/clipboard-1391538419.png)
 
 3.  Select an ISA-Tab template
 
-![](images/clipboard-2875853019.png)
+![Select ISA-tab template](fig/clipboard-2875853019.png)
 
 4.  Fill the form:
 
-![](images/clipboard-934212931.png)
+![ISA-tab form](fig/clipboard-934212931.png)
 
 ::: callout
 #### Note
